@@ -1,0 +1,145 @@
+---
+title: Como Integrar Emissão de NFE na Mundipagg com NFe.io
+description: Saiba como integrar a emissão de NFS-e na Mundipagg com o NFe.io
+slug: mundipagg
+sidebar_label: Mundipagg
+---
+# O que é a Mundipagg?
+
+A Mundipagg acredita que pagamentos online devem ser rápidos e simples!
+Querendo sempre que seu cliente foque no que mais importa: **o negócio**. Por isso, desenvolveram sua tecnologia de pagamentos para ajudar a gerar negócios e oferecer soluções de pagamento online. Ou seja, a mundipagg é uma solução de meio de pagamento.
+
+> Pertencente ao grupo Stone.co a Mundipagg, oferece uma gama de soluções para automatizar os processos internos e tornar a operação mais inteligente.
+
+## Uma empresa jovem focada em entregar o melhor resultado
+
+A Mundipagg começou como uma startup em janeiro de 2012, mas já nascendo focados em entregar a melhor experiência em pagamentos graças aos 13 anos de atuação de seus fundadores no mercado.
+
+Criada por empreendedores e feita para quem quer empreender o futuro, a Mundipagg foi pensada para ajudar você a escalar a sua operação com facilidade. Você gerencia o seu negócio e a gente cuida de toda a tecnologia de pagamentos.
+
+São uma empresa do Grupo Stone Co., que possui um ecossistema completo de pagamentos.
+
+## Funcionalidades NFE.io e Mundipagg
+
+- Emissão automática de NFS-e após um pedido pago;
+- Emissão automática de NFS-e após uma fatura paga (assinatura);
+- Cancelamento automático de NFS-e após um pedido cancelado;
+- Cancelamento automático de NFS-e após uma fatura cancelada (assinatura);
+- Cancelamento sincronizado na Mundipagg quando NFS-e é cancelada pelo painel do NFe.io;
+
+> Obs.: atualmente o aplicativo do NFe.io disponibilizado pela Mundipagg gera apenas Notas fiscais de Serviço.
+
+## Como integrar?
+
+### Passo 1
+
+Para integrar você precisa obter os dados de acesso no painel do NFe.io (código da empresa e o token de acesso). Veja como obter esses dados na seção obtendo [chaves de autenticação no NFe.io.](https://nfe.io/docs/documentacao/nossa-plataforma/chaves-de-autenticacao/ "chaves de autenticação no NFe.io.")
+
+### Passo 2
+
+Instale o App do NFe.io pelo Hub para autorizar a aplicação. Durante a instalação serão solicitados alguns dados adicionais. Para ver mais sobre os dados adicionais, veja a seção dados adicionais da integração mais abaixo nesse texto.
+
+> Durante essa etapa você pode negar a permissão de algum evento ao aplicativo, porém essa ação pode desabitar alguma funcionalidade relacionada.
+
+**Pronto!** Sua integração está configurada e pronta para funcionar.
+
+>Obs: Para o funcionamento da integração, não é necessário copiar o Id ou o Token da instalação para nenhum lugar.
+
+
+## Obtendo chaves de acesso no NFe.io
+Para obter as chaves de acesso necessárias, acesse sua conta no NFe.io, no menu empresas, clique em alterar na empresa desejada e em seguida acesse o menu chaves de acesso.
+
+Nessa tela, será possível obter o *Empresa ID* (código da empresa) e o *Nota Fiscal (api.nfe.io)* (API Key).
+
+![obtendo a chave de acesso](https://nfe.io/docs/app/uploads/2020/08/obtendo-a-chave-de-acesso.png)
+
+
+## Dados adicionais da integração
+
+Durante a instalação serão solicitadas algumas informações adicionais para configurar a sua integração. Você pode editar essas informações posteriormente por aqui mesmo.
+
+É possível criar uma lista de empresas em sua instalação e identificá-las, para que você possa definir por qual empresa emitir a NFe caso seja necessário emitir por mais de um CNPJ conforme demanda. Sendo a interação feita via metadata.
+
+**Importante:** a primeira empresa definida na instação será sempre considerada como empresa default para emissão.
+
+- **API Key:** Chave de autenticação que será usada para comunicação com a API da Nfe.io;
+- **Código de serviço na cidade:** Código específico do serviço para seu município que está habilitado em sua inscrição municipal (CCM). Consulte seu contador para saber qual código deve usar;
+- **Empresa ID:** Identificação da empresa no sistema da NFe.io;
+- **Identificador:** Identificação da empresa na Mundipagg (a sua escolha), para cenários que você possua mais de uma empresa no ambiente do NFe.io, você poderá criar uma lista de empresas identificá-las;
+- **Sempre emitir nota fiscal:** Habilita emissão automática após um pedido/fatura paga. Caso esteja desabilitado, será necessário enviar o metadata nfeio_issuance_enabled : true para que a notificação seja enviada;
+- **Sempre cancelar nota fiscal:** Habilita cancelamento automático da nota fiscal após um pedido/fatura cancelada. Caso esteja desabilitado, será necessário enviar o metadata nfeio_cancellation_enabled : true para que o cancelamento da cobrança na Mundipagg reflita na nota fiscal;
+- **Sempre cancelar cobrança:** Habilita cancelamento automático da cobrança na Mundipagg após uma nota fiscal ser cancelada pela plataforma do NFe.io. Caso esteja desabilitado, será necessário enviar o metadata charge_cancellation_enabled : true para que o cancelamento da nota fiscal reflita na cobrança na Mundipagg;
+- **Sempre cancelar cobrança com nota fiscal com erro:** Habilita cancelamento automático da cobrança na Mundipagg após uma nota fiscal não ter sido criada corretamente pela plataforma do NFe.io. Este caso geralmente acontece ao criar uma nota com algum dado inválido, como um CEP que não existe. Caso esteja desabilitado, será necessário enviar o metadata charge_failed_cancellation_enabled : true para que o erro da nota fiscal reflita na cobrança na Mundipagg;
+- **Sempre criar nota fiscal com CPF/CNPJ inválido**: Habilita criação automática da nota fiscal mesmo que o documento (CPF ou CNPJ) do cliente estiver errado. Nessa caso, as notas fiscais serão criadas sem nenhum documento nela.
+- **Descrição da Nota Fiscal**: Descrição do serviço que será exibida na nota fiscal;
+- **CEP padrão**: O CEP padrão é usando quando não encontramos o código do IBGE do CEP passado no pedido. Nesse caso, criaremos a nota fiscal com o CEP que você digitou nesse campo. Caso você deixe vazio, os pedidos com CEP sem código do IBGE não criarão nota fiscal. Normalmente esse problema acontece com CEPs que foram alterados recentemente e ainda não foram atualizados no Correios.
+
+>Se você remover permissões de evento, os recursos associados a eles não serão permitidos. Por exemplo, se a permissão de *Fatura Paga* não for habilitada, a emissão de nota fiscal para assinatura não funcionará.
+
+## Variáveis na Descrição da Nota Fiscal
+
+Você pode utilizar variáveis para personalizar a descrição da sua nota fiscal com dados específicos do seu pedido ou fatura. Para isso basta utilizar os campos abaixo como parte do texto da sua descrição e no momento da emissão da nota iremos substituir pelo informação correta.
+
+`{name}` Nome do comprador;
+`{code}` Código do pedido ou da assinatura;
+`{items}` Exibe os itens do pedido, 1 item por linha;
+`{cycle_start}` Período inicial do ciclo de cobrança da assinatura;
+`{cycle_end}` Período final do ciclo de cobrança da assinatura;
+
+## Interagindo via Metadata
+Para alguns modelos de negócio mais complexos, pode ser necessário manipular mais informações durante a emissão de uma nota fiscal, como tornar o valor da nota fiscal diferente do total do pedido.
+
+>A sua integração com a Mundipagg pode enviar alguns metadatas para sinalizar algumas ações, como:
+
+`nfeio_increase_flat` Adiciona um valor específico ao valor final da nota fiscal, podendo ser um acréscimo ou desconto (para aplicar um desconto envie um valor negativo). O valor deve ser informado em centavos. Exemplo: -1050 aplica um desconto de R$ 10,50;
+
+`nfeio_increase_percent` Adiciona um valor proporcional ao valor do pedido em % ao valor final da nota fiscal, podendo ser um acréscimo ou desconto (para aplicar um desconto envie um valor negativo). Exemplo: -2.6 aplica um desconto de 2.6% em relação ao valor do pedido;
+
+`nfeio_issuance_enabled` Habilita (true) ou desabilita (false) a criação automática da nota fiscal para a assinatura/pedido criado; Quando passado, esse metadata sobreescreve o campo Sempre emitir nota fiscal;
+
+`nfeio_cancellation_enabled` Habilita (true) ou desabilita (false) o cancelamento automático da nota fiscal para a assinatura/pedido criado; Quando passado, esse metadata sobreescreve o campo Sempre cancelar nota fiscal;
+
+`charge_cancellation_enabled` Habilita (true) ou desabilita (false) o cancelamento automático de uma cobrança caso a nota fiscal referente seja cancelada. Quando passado, esse metadata sobreescreve o campo Sempre cancelar cobrança;
+
+`charge_failed_cancellation_enabled` Habilita (true) ou desabilita (false) o cancelamento automático de uma cobrança caso ocorra algum erro ao criar a nota fiscal referente.
+
+`nfeio_description` Altera a descrição da NFS-e. Caso não enviado e a emissão for baseada em um pedido ou fatura, será inserido os items como descrição. Caso seja baseado apenas em uma cobrança avulsa (sem carrinho de compras) será usado o nome da loja.
+
+`nfeio_discover_real_amount_percent` Caso um NFe tenha um acréscimo percentual no seu valor original, esta propriedade permite que esta informação seja recebida para que o valor original da nota possa ser trabalhado posteriormente.
+
+`nfeio_company_identification` Para casos em que seja necessário emitir NFe em empresas diferentes dentro do NFe.io, deve ser passado o Indentificador da Mundipagg neste campo, para que repassemos os dados deste caso específico para a emissão avulsa.
+
+## Metadatas informativos
+
+Quando nós integarimos com uma cobrança, pedido ou fatura, podemos adicionar metadatas a estes dependendo de algum fluxo e permissões específicas. As permissões necessárias são:
+
+- Atualizar Metadata de Cobrança
+- Atualizar Metadata de Pedido
+- Atualizar Metadata da Fatura
+
+
+**Os possíveis metadatas são:**
+
+`nfeio_issuance_error_message` Caso ocorra algum erro no momento de ciração da nota, este campo será preenchido com o motivo do erro;
+
+`nfeio_cancellation_error_message` Caso ocorra algum erro no momento de cancelamento da nota, este campo será preenchido com o motivo do erro;
+
+`nfeio_invoice_id` Identificador da nota fiscal pra a NFe.io;
+
+`nfeio_invoice_number` Número da RPS (Recibo Provisório de Serviços);
+
+`nfeio_invoice_provider_number` Número da nota fiscal;
+
+`nfeio_invoice_status` Status de processamento. Possíveis valores: CancelFailed, IssueFailed, Issued, Cancelled, PullFromCityHall, WaitingCalculateTaxes, WaitingDefineRpsNumber, WaitingSend, WaitingSendCancel, WaitingReturn, WaitingDownload;
+
+`nfeio_issue_date` Data de emissão da nota fiscal;
+
+`nfeio_provider_legal_name` Razão social da sua empresa;
+
+`nfeio_invoice_services_amount` Valor cobrado na nota fiscal;
+
+`nfeio_invoice_iss_amount` Valor do ISS (Imposto Sobre Serviços);
+
+`nfeio_pdf_url` Link para PDF da nota fiscal;
+
+`nfeio_cancel_date` Data de cancelamento da nota fiscal;

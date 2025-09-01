@@ -1,0 +1,125 @@
+---
+title: Como integrar nossa API de Consulta de CNPJ com o CRM Hubspot via Zapier
+description: Aprenda a integrar nossa API de Consulta de dados dos CNPJ's com o CRM Hubspot via Zapier.
+sidebar_position: 7
+sidebar_label: Hubspot
+slug: integracoes/plataformas/integracoes-plataformas-como-integrar-nossa-api-de-consulta-de-dados-com-o-crm-hubspot-via-zapier
+---
+
+# Como integrar nossa API de Consulta de CNPJ com o CRM Hubspot via Zapier
+
+> Nesse artigo te ensinaremos Como integrar nossa API de Consulta de dados dos CNPJ's com o CRM Hubspot via Zapier.
+
+Um dos principais problemas das empresas é uma base de dados e de clientes extremamente bagunçada e sem dados padronizados, dificultando a vida dos times de Marketing, Operações, Vendas e Desenvolvedores.
+
+Somos inconformados com isso e nosso principal objetivo é que você consiga, sem muitos conhecimentos técnicos, integrar nossa API de consulta de dados na Receita Federal de forma fácil e rápida. Padronizando assim sua base de clientes com informações extremamente atualizadas e direto dos servidores da Receita Federal.
+
+## Ao final desse tutorial, você será capaz de:
+- Integrar nossa API de Consulta de dados dos CNPJ's ao seu CRM
+- Entender melhor sobre normatização e padronização de base
+- Conhecer os campos dos dados dos CNPJ's na Receita Federal
+
+## Pré Requisitos
+
+- Criar campos ou propriedades em sua base de dados ou CRM em nosso caso o Hubspot
+- Conta no [Zapier](https://zapier.com/ "Zapier")
+- Conta em nossa plataforma [criar conta](https://app.nfe.io/ "criar conta")
+- Apikey da sua conta
+
+## Passo a passo
+
+### 1º - Criar conta na NFE.io e pegar a sua API key
+
+Primeiro e mais importante passo é criar uma conta na plataforma da [NFE.io](https://app.nfe.io/), esse passo é fundamental para ter acesso a sua API Key.
+
+[Veja aqui](https://nfe.io/docs/documentacao/nossa-plataforma/criar-conta/) como criar a sua conta na plataforma passo a passo, é gratuita e estará em ambiente de teste.
+
+> Logo após a criação da conta, você deverá escolher os serviços que deseja utlizar em nossa plataforma, escolha a opção  *Consulta de Pessoa Jurídica*.
+
+![Consulta de dados](https://nfe.io/docs/app/uploads/2020/10/create-a-new-account-4-e1603997839899.png)
+
+
+Agora que você já tem uma conta, [siga esse artigo](https://nfe.io/docs/documentacao/nossa-plataforma/chaves-de-autenticacao/ "siga esse artigo") para encontrar sua Api key ou Chave de Acesso
+
+A figura abaixo mostra a tela onde a Api key fica, Copie a de Dados. Vamos precisar dela logo abaixo.
+
+![API key](https://nfe.io/docs/app/uploads/2020/09/access-key.png)
+
+### 2º - Criar campos ou propriedades em sua base de dados ou CRM em nosso caso o Hubspot
+
+Agora que já sabemos qual é nossa Chave de Acesso ou Api key é hora de padronizarmos os campos que vamos colocar a Informação do CNPJ que queremos consulta, bem como os campos que queremos que sejam preenchidos com a informação da Receita Federal.
+Como usamos o Hubspot aqui na NFE.io, precisamos criar no objeto de empresas (lembre-se onde criou pois irá usar mais tarde) apenas os campos abaixo:
+
+- CNPJ (Tipo do Campos texto)
+- Status CNPJ (Tipo do Campos texto)
+- Capital Social (Tipo do Campos Número)
+- CNAE Primário (Tipo do Campos texto)
+- Descrição do CNAE Primário (Tipo do Campos texto)
+- Inscrição Estadual (Tipo do Campos texto)
+- Inscrição Municipal (Tipo do Campos texto)
+- Tamanho da Empresa (Tipo do Campos texto)
+
+> Você pode adicionar também outras informações como Nome Fantasia, Razão Social, endereço completo, telefones, emails, nome dos sócios entre outras informações, confira a API completa [aqui](https://nfe.io/docs/desenvolvedores/rest-api/consulta-de-cnpj-v1/#/LegalEntities/V1LegalentitiesBasicInfoByFederalTaxNumberGet "aqui")
+
+No Hubspot você tem que ir em *Configurações* > *Propriedades* > *Propriedades de Empresas* > *Criar propriedade*
+
+![](https://nfe.io/docs/app/uploads/2020/12/print-1-hubspot.png)
+
+### 3º Criar conta no Zapier
+
+Para criar a conta no Zapier [clique aqui](https://zapier.com/sign-up/ "clique aqui"), preencha seu email de trabalho, primeiro nome e ultimo nome. Clique em Sign Up, botão laranjado.
+>Caso queira mais sobre o Zapier esse video pode te ajudar [Como Usar o ZAPIER para Automatizar Tarefas Tutorial Básico](https://youtu.be/yvj_K_RwU7s "Como Usar o ZAPIER para Automatizar Tarefas Tutorial Básico")
+
+1. Após a conta criada, vamos conectar o Hubspot na conta do Zapier.
+2. Abra o Zapier, clique em *Make a Zap*
+3. De um nome ao seu Zap no canto superior esquerdo, o nosso aqui se chamará *Normatização de base do Hubspot com a API NFE*
+
+### 4º Conectar o Hubspot em sua conta e começar a integração
+
+1. No passo 1 Trigger selecione o Hubspot
+2. Em *Trigger Event* escolha a opção *New Company Property Change* e clique em Continue
+
+![](https://nfe.io/docs/app/uploads/2020/12/zapier-trigger-event.png)
+
+3. Escolha sua conta da hubspot e clique em Continue
+4. Em *Set up trigger*, você tem que colocar o campo CNPJ criado nas propriedades anteriormente. Lembrando que quando houver criação ou alteração dessa informação o comando será disparado.
+
+![](https://nfe.io/docs/app/uploads/2020/12/zapier-set-up-trigger.png)
+
+5. Clique em continuar e depois *Test Trigger* para o Zapier ir no Hubspot procurar essa informação; é muito importante ter esse campo preenchido pelo menos uma vez em sua base ou CRM para poder retornar alguma informação. Dessa forma:
+
+![](https://nfe.io/docs/app/uploads/2020/12/zapier-test-trigger.png)
+
+6. Tudo certo com as informações é hora de configurar a segunda ação dentro do Zapier, na caixa de busca digite *Webhooks by Zapier* e selecione essa opção.
+
+![](https://nfe.io/docs/app/uploads/2020/12/zapier-webhook-by-zapier.png)
+
+7. Na caixa *Action Event* Selecione > GET > Continue
+
+8. Agora vem uma parte muito importante, preste atenção: na opção de URL copie e cole essa informação toda: http://legalentity.api.nfe.io/v1/legalentities/basicInfo/{{cnpj}}?updateaddress=true&apikey={sua apikey aqui}
+
+9. Substitua o `{{cnpj}}` pela propriedade do Hubspot correspondente ao CNPJ e substitua também `{sua apikey aqui}` pela api key que você copiou da sua conta em nossa plataforma. O Zapier deve ficar igual essa imagem aqui.
+
+![](https://nfe.io/docs/app/uploads/2020/12/zapier-colando-certinho-o-caminho.png)
+
+10. Se você fez o passo 9 certinho você estará vendo a mensagem *Test was successful!!* e todos os dados da Receita Federal disponíveis em nossa api estará aparecendo para você.
+
+![](https://nfe.io/docs/app/uploads/2020/12/zapier-teste-successful.png)
+
+11. Agora adicionaremos a 3ª Etapa que é fazer o update com essas informações la no Hubspot, trazendo todos os dados diretos da RFB e normatizando a informação em nossos sistemas.
+
+12. Clique no + azul, selecione o Hubspot e na opção *Action Event* escolha *Update Company* na primeira opção "Object ID" coloque o campo do primeiro passo chamado "1.Company Id:o resultado numerico", depois selecione as propriedades que você criou no Passo 2 desse tutorial. Ficará igual essa imagem
+
+![](https://nfe.io/docs/app/uploads/2020/12/zapier-3-parte-da-integracao.png)
+
+13. Clique em testar e continuar, logo após é só *Turn on Zap* que sua integração já estará funcionando.
+
+> Caso queira ver esse zap é só [clicar aqui](https://zapier.com/shared/fef18b7a5b89d7a027badaa44bc87cc884db3947), Lembrando que a Chave de acesso não é mais válida, você tem que ter sua própria chave.
+
+## Precisa de ajuda?
+
+O que achou do nosso passo a passo? Se precisar de ajuda é só enviar um email para [Suporte](mailto:suporte@nfe.io) com a sua pergunta que ficaremos felizes de responder.
+
+## Quer uma conta em produção?
+
+Para transformar a sua conta em produção, entre em contato conosco pelo e-mail [Comercial](mailto:comercial@nfe.io), que lhe atenderemos com o maior prazer.
