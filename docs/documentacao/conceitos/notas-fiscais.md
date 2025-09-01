@@ -1,17 +1,19 @@
 ---
-sidebar_label: "Notas Fiscais"
-sidebar_position: 2
+author: Gabriel Marquez
 slug: notas-fiscais
+sidebar_position: 2
 date: 2020-08-11
+sidebar_label: Notas Fiscais
 last_update:
   date: 2020-11-11
-title: "Notas Fiscais - NFE.io | Docs"
-description: "Você deseja automatizar o seu processo de emissão de notas fiscais? Através das nossas API’s você pode emitir suas notas online e automaticamente sem preocupação."
-author: "Gabriel Marquez"
+title: Notas Fiscais
+description: Você deseja automatizar o seu processo de emissão de notas fiscais?
+  Através das nossas API’s você pode emitir suas notas online e automaticamente
+  sem preocupação.
 migration_info:
-  migrated_on: "2025-08-18 03:18:51"
-  migrated_by: "andrekutianski"
-  source: "WordPress"
+  migrated_on: 2025-08-18 03:18:51
+  migrated_by: andrekutianski
+  source: WordPress
   source_id: 311
 ---
 
