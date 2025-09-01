@@ -27,7 +27,9 @@ logo_url: https://nfe.io/app/themes/nfe_site/img/nfe-logo.svg
 title: NFE.io Docs
 show_preview_links: false
 backend:
-  name: git-gateway
+  name: github
+  repo: mimirtechbr/nfeio-poc-docs
+  branch: develop
 
 # These lines should *not* be indented
 media_folder: /static/img # Media files will be stored in the repo under static/images/uploads
