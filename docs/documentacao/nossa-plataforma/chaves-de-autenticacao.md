@@ -1,18 +1,19 @@
 ---
-sidebar_label: "Chaves de autenticação"
-sidebar_position: 5
+author: Gabriel Marquez
 slug: chaves-de-autenticacao
+sidebar_position: 5
 date: 2020-09-21
+sidebar_label: Chaves de autenticação
 last_update:
   date: 2020-10-29
-title: "Chaves de autenticação (API Keys) - NFE.io | Docs"
-description: "Nesta documentação você irá aprender como utilizar as chaves de autenticação (API Keys) da plataforma da NFE.io."
-author: "Gabriel Marquez"
-image: "https://nfe.io/docs/app/uploads/2020/09/account-page.png"
+title: Chaves de autenticação (API Keys)
+image: https://nfe.io/docs/app/uploads/2020/09/account-page.png
+description: Nesta documentação você irá aprender como utilizar as chaves de
+  autenticação (API Keys) da plataforma da NFE.io.
 migration_info:
-  migrated_on: "2025-08-18 03:18:51"
-  migrated_by: "andrekutianski"
-  source: "WordPress"
+  migrated_on: 2025-08-18 03:18:51
+  migrated_by: andrekutianski
+  source: WordPress
   source_id: 554
 ---
 
