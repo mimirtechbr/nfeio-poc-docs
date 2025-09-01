@@ -1,0 +1,233 @@
+default-fields: &default-fields
+  - { name: title, label: Title, widget: string }
+  - { name: body, label: Body, widget: markdown }
+  - { name: slug, label: Slug, widget: string, required: false, hint: "Deixe vazio para gerar automaticamente a partir do título" }
+  - name: "tags"
+    label: "Tags"
+    widget: "list"
+    default: [ ]
+  - { name: sidebar_position, label: Posição no Menu Lateral, hint: "Posicao relativa ao diretorio pai. Valor maior para posicao inferior." ,widget: number }
+  - { name: description, label: Meta Description, widget: text, required: false, hint: "Descrição para SEO" }
+  - { name: image, label: OG Image, widget: image, required: false, hint: "Imagem para compartilhamento em redes sociais (tamanho recomendado: 1200x630px)" }
+
+seo-fields: &seo-fields
+  label: SEO
+  name: seo
+  widget: object
+  fields:
+    - { name: description, label: Meta Descrição, widget: text, required: false, hint: "Descrição para SEO (máximo 160 caracteres)" }
+    - { name: keywords, label: Keywords, widget: list, required: false, hint: "Palavras-chave separadas por vírgulas" }
+    - { name: image, label: OG Image, widget: image, required: false, hint: "Imagem para compartilhamento em redes sociais (tamanho recomendado: 1200x630px)" }
+
+# https://decapcms.org/docs/working-with-a-local-git-repository/
+# when using the default proxy server port
+local_backend: true
+locale: 'pt'
+logo_url: https://nfe.io/app/themes/nfe_site/img/nfe-logo.svg
+title: NFE.io Docs
+show_preview_links: false
+backend:
+  name: git-gateway
+
+# These lines should *not* be indented
+media_folder: /static/img # Media files will be stored in the repo under static/images/uploads
+public_folder: /img # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  # single type collection
+  - name: "introducao"
+    label: "Introdução"
+    files:
+      - label: "Introdução"
+        name: "introducao"
+        file: /docs/documentacao/index.md
+        identifier_field: title
+        extension: md
+        widget: "markdown"
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+          - *seo-fields
+  - name: motor-de-calculo-de-imposto
+    label: "Motor de Cálculo de Imposto"
+    files:
+      - label: "Motor de Cálculo de Imposto"
+        name: "motor-de-calculo-de-imposto"
+        file: /docs/documentacao/motor-de-calculo-de-tributos.md
+        identifier_field: title
+        extension: md
+        widget: "markdown"
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+          - { name: slug, label: Slug, widget: string }
+          - name: "tags"
+            label: "Tags"
+            widget: "list"
+            default: [ ]
+          - { name: sidebar_position, label: Posição no Menu Lateral, widget: number }
+          - *seo-fields
+
+
+  # folder type collection
+  - name: nossa_plataforma
+    label: "Nossa Plataforma"
+    folder: /docs/documentacao/nossa-plataforma
+    media_folder: /static/static/docs
+    public_folder: /static/docs
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug, widget: string }
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        default: [ ]
+      - { name: sidebar_position, label: Posição no Menu Lateral, widget: number }
+      - *seo-fields
+
+  - name: conceitos
+    label: "Conceitos"
+    folder: /docs/documentacao/conceitos
+    media_folder: /static/static/docs
+    public_folder: /static/docs
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: *default-fields
+
+  - name: certificado-digital
+    label: "Certificado Digital"
+    folder: /docs/documentacao/certificado-digital
+    media_folder: /static/static/docs
+    public_folder: /static/docs
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug, widget: string }
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        default: [ ]
+      - { name: sidebar_position, label: Posição no Menu Lateral, widget: number }
+      - *seo-fields
+
+  - name: consultas
+    label: "Consultas"
+    folder: /docs/documentacao/consultas
+    media_folder: /static/static/docs
+    public_folder: /static/docs
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug, widget: string }
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        default: [ ]
+      - { name: sidebar_position, label: Posição no Menu Lateral, widget: number }
+      - *seo-fields
+
+  - name: nota-fiscal-servico-eletronica
+    label: "Nota Fiscal de Serviço Eletrônica"
+    folder: /docs/documentacao/nota-fiscal-servico-eletronica
+    media_folder: /static/static/docs
+    public_folder: /static/docs
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug, widget: string }
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        default: [ ]
+      - { name: sidebar_position, label: Posição no Menu Lateral, widget: number }
+      - *seo-fields
+
+  - name: nota-fiscal-produto-eletronica
+    label: "Nota Fiscal de Produto Eletrônica"
+    folder: /docs/documentacao/nota-fiscal-produto-eletronica
+    media_folder: /static/static/docs
+    public_folder: /static/docs
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug, widget: string }
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        default: [ ]
+      - { name: sidebar_position, label: Posição no Menu Lateral, widget: number }
+
+
+  - name: nota-fiscal-consumidor
+    label: "Nota Fiscal do Consumidor"
+    folder: /docs/documentacao/nota-fiscal-consumidor
+    media_folder: /static/static/docs
+    public_folder: /static/docs
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug, widget: string }
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        default: [ ]
+      - { name: sidebar_position, label: Posição no Menu Lateral, widget: number }
+      - *seo-fields
+
+  - name: webhooks
+    label: "Webhooks"
+    folder: /docs/documentacao/webhooks
+    media_folder: /static/static/docs
+    public_folder: /static/docs
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: *default-fields
+
+  - name: releases
+    label: "Releases"
+    folder: /docs/documentacao/releases
+    media_folder: /static/static/docs
+    public_folder: /static/docs
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: *default-fields
