@@ -1,17 +1,19 @@
 ---
-sidebar_label: "Credenciamento"
-sidebar_position: 2
+author: Gabriel Marquez
 slug: credenciamento
+sidebar_position: 2
 date: 2020-09-24
+sidebar_label: Credenciamento
 last_update:
   date: 2020-10-27
-title: "Credenciamento de nota fiscal de consumidor eletronica - NFE.io | Docs"
-description: "Todos os procedimentos para credenciamento de nota fiscal de consumidor citados abaixo servem como um guia, mas sempre consulte seu contador."
-author: "Gabriel Marquez"
+title: Credenciamento de nota fiscal de consumidor eletrônica
+description: Todos os procedimentos para credenciamento de nota fiscal de
+  consumidor citados abaixo servem como um guia, mas sempre consulte seu
+  contador.
 migration_info:
-  migrated_on: "2025-08-18 03:18:51"
-  migrated_by: "andrekutianski"
-  source: "WordPress"
+  migrated_on: 2025-08-18 03:18:51
+  migrated_by: andrekutianski
+  source: WordPress
   source_id: 620
 ---
 
