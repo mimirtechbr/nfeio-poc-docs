@@ -1,17 +1,19 @@
 ---
-sidebar_label: "Conceitos"
-sidebar_position: 1
+author: Gabriel Marquez
 slug: conceitos
+sidebar_position: 1
 date: 2020-09-23
+sidebar_label: Conceitos
 last_update:
   date: 2020-10-21
-title: "Conceitos - NFE.io | Docs"
-description: "Tudo sobre Nota Fiscal de ConsumidorO que é Nota Fiscal de Consumidor (NFC-e)?O que é o DANFE-NFC-e?Como emitir a NFC-e? Tudo sobre Nota&#8230;"
-author: "Gabriel Marquez"
+title: Conceitos
+description: Tudo sobre Nota Fiscal de ConsumidorO que é Nota Fiscal de
+  Consumidor (NFC-e)?O que é o DANFE-NFC-e?Como emitir a NFC-e? Tudo sobre
+  Nota&#8230;
 migration_info:
-  migrated_on: "2025-08-18 03:18:51"
-  migrated_by: "andrekutianski"
-  source: "WordPress"
+  migrated_on: 2025-08-18 03:18:51
+  migrated_by: andrekutianski
+  source: WordPress
   source_id: 613
 ---
 
