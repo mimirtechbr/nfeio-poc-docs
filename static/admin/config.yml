@@ -30,7 +30,9 @@ backend:
   name: github
   repo: mimirtechbr/nfeio-poc-docs
   branch: develop
-  site_domain: f243c0d4-9888-4b3c-a906-23319a237f2f
+  base_url: https://nfeiodocspoc-gitgateway-l7q0vj.ctb-1-eu-east-1.cloudainer.com
+  site_domain: https://nfe-docs-poc.cloudainer.com
+  auth_endpoint: auth
 
 # These lines should *not* be indented
 media_folder: /static/img # Media files will be stored in the repo under static/images/uploads
