@@ -1,4 +1,27 @@
+/*@import "tailwindcss";*/
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import "theme.css" layer(theme);
+
+@layer base {
+    #tw-scope {
+        @import "preflight.css" layer(base);
+    }
+}
+
+@import "utilities.css" layer(utilities);
+
+@custom-variant dark (&:is([data-theme="dark"] *));
+
+@theme inline {
+    /* Configure your theme variables here */
+    --font-display: "Roboto", "sans-serif";
+    --color-primary-500: oklch(0.84 0.18 117.33);
+    --spacing: 0.25rem;
+}
+
+html:has(body):has(div):has(div):has(.homepage) {
+    scroll-behavior: smooth;
+}
 
 
 /* You can override the default Infima variables here. */
@@ -89,109 +112,7 @@
 
 }
 
-/* Typography Styles based on Figma */
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--ifm-font-family-heading);
-}
-
-h1 {
-    font-weight: 400;
-    letter-spacing: -2.68%;
-}
-
-h2 {
-    font-weight: 500;
-    letter-spacing: -1.25%;
-}
-
-h3 {
-    font-weight: 400;
-}
-
-h4 {
-    font-weight: 600;
-    letter-spacing: -1.04%;
-}
-
-h5 {
-    font-weight: 500;
-}
-
-h6 {
-    font-weight: 600;
-}
-
-/* Subtitles */
-.subtitle-1 {
-    font-family: var(--ifm-font-family-heading);
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.subtitle-2 {
-    font-family: var(--ifm-font-family-heading);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-/* Body Text */
-.body-1 {
-    font-family: var(--ifm-font-family-base);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 1.5625%;
-}
-
-.body-2 {
-    font-family: var(--ifm-font-family-base);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 1.7857%;
-}
-
-/* Captions */
-.caption {
-    font-family: var(--ifm-font-family-base);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 3.33%;
-}
-
-/* Overline */
-.overline {
-    font-family: var(--ifm-font-family-base);
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 15%;
-    text-transform: uppercase;
-}
-
-/* Button Labels */
-.label-16 {
-    font-family: var(--ifm-font-family-base);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 1.5625%;
-    text-transform: uppercase;
-}
-
-.label-14 {
-    font-family: var(--ifm-font-family-base);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 1.7857%;
-    text-transform: uppercase;
-}
 
 /* MENU STYLES */
 /*level 2 */
