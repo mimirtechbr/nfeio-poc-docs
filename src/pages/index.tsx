@@ -61,7 +61,7 @@ export default function Home(): ReactNode {
       <main className="homepage-main">
           <HomePageCards />
         <HomePageSectionTitleOne title={"Confira alguns itens da nossa documentação"} />
-          <HomePageFeaturedContent />
+          {/*<HomePageFeaturedContent />*/}
       </main>
     </Layout>
   );
