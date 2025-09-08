@@ -7,7 +7,7 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-    title: 'NFe.io Documentação',
+    title: 'NFE.io Documentação',
     tagline: 'Explore a extensa documentação do NFE. Você vai encontrar aqui documentação sobre a plataforma, referência para as APIs e bibliotecas para desenvolvimento.',
     favicon: 'img/favicon.ico',
 
@@ -24,8 +24,8 @@ const config: Config = {
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'facebook', // Usually your GitHub org/user name.
-    projectName: 'docusaurus', // Usually your repo name.
+    organizationName: 'NFE.io', // Usually your GitHub org/user name.
+    projectName: 'docs', // Usually your repo name.
 
     onBrokenLinks: 'log',
     onBrokenMarkdownLinks: 'log',
@@ -37,6 +37,8 @@ const config: Config = {
     },
 
     plugins: [
+        "./src/plugins/tailwind-config.js",
+        "docusaurus-plugin-sass",
         [
             "docusaurus-plugin-openapi-docs",
             {
@@ -157,7 +159,9 @@ const config: Config = {
                 docs: false,
                 blog: false,
                 theme: {
-                    customCss: './src/css/custom.css',
+                    customCss: [
+                        './src/css/custom.scss'
+                    ],
                 },
             } satisfies Preset.Options,
         ],
