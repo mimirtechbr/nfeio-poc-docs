@@ -182,6 +182,11 @@ const config: Config = {
             },
             items: [
                 {
+                    to: '/',
+                    position: 'left',
+                    label: 'Início',
+                },
+                {
                     type: 'docSidebar',
                     sidebarId: 'documentationSideBar',
                     docId: 'documentacao/intro',
