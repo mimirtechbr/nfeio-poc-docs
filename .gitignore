@@ -27,3 +27,4 @@ docs/**/*.tag.mdx
 docs/**/sidebar.js
 docs/**/sidebar.ts
 docs/**/versions.json
+*.zip
