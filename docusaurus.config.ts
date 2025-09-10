@@ -160,8 +160,7 @@ const config: Config = {
                 blog: false,
                 theme: {
                     customCss: [
-                        require.resolve('./src/css/tailwind.css'),
-                        require.resolve('./src/css/custom.scss')
+                        './src/css/custom.css',
                     ],
                 },
             } satisfies Preset.Options,

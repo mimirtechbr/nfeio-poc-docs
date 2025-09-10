@@ -24,18 +24,17 @@
     "@docusaurus/preset-classic": "3.8.1",
     "@heroicons/react": "^2.2.0",
     "@mdx-js/react": "^3.0.0",
+    "@tailwindcss/postcss": "^4.1.13",
+    "clsx": "^2.1.1",
     "docusaurus-plugin-openapi-docs": "^4.5.1",
     "docusaurus-plugin-sass": "^0.2.6",
     "docusaurus-theme-openapi-docs": "^4.5.1",
+    "motion": "^12.23.12",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sass": "^1.92.1",
-    "tailwindcss": "^4.1.13",
     "tailwind-merge": "^3.3.1",
-    "@tailwindcss/postcss": "^4.1.13",
-    "clsx": "^2.1.1",
-    "motion": "^12.23.12"
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.8.1",
