@@ -147,6 +147,7 @@ html:has(body):has(div):has(div):has(.homepage) {
 
 }
 
+/* background com gradiente linear, uso: <div class="nfeio-bg-gradient">...</div> */
 .nfeio-bg-gradient {
   background: #5DCFF2;
   background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
