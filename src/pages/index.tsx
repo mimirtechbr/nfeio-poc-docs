@@ -19,50 +19,30 @@ function HeroSectionOne() {
 
     return (
         <div className="h-120 relative w-full overflow-hidden bg-slate-800 flex flex-col items-center justify-center">
-            <div className="absolute inset-0 w-full h-full bg-primary-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+            <div
+                className="absolute inset-0 w-full h-full bg-primary-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none"/>
 
-            <BoxesBackground />
-            <FlipWordsHero />
+            <BoxesBackground/>
+            <FlipWordsHero/>
         </div>
     );
 }
 
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description={`${siteConfig.tagline}`}
-      wrapperClassName="homepage tw-scope"
-    >
-        <HeroSectionOne />
-      <main className="homepage-main">
-          <HomePageCards />
-        <HomePageSectionTitleOne title={"Confira alguns itens da nossa documentação"} />
-          <HomePageFeaturedContent />
-      </main>
-    </Layout>
-  );
+    const {siteConfig} = useDocusaurusContext();
+    return (
+        <Layout
+            title={`${siteConfig.title}`}
+            description={`${siteConfig.tagline}`}
+            wrapperClassName="homepage tw-scope"
+        >
+            <HeroSectionOne/>
+            <main className="homepage-main">
+                <HomePageCards/>
+                <HomePageSectionTitleOne title={"Confira alguns itens da nossa documentação"}/>
+                <HomePageFeaturedContent/>
+            </main>
+        </Layout>
+    );
 }
