@@ -1,5 +1,6 @@
 "use client";
 // https://ui.aceternity.com/components/hover-border-gradient
+import Link from '@docusaurus/Link';
 import React, {useState, useEffect, useRef} from "react";
 import {motion} from "motion/react";
 import {cn} from "@site/lib/utils";
@@ -15,6 +16,8 @@ export function HoverBorderGradient({
                                         duration = 1,
                                         clockwise = true,
                                         colorTheme = "green",
+                                        href,
+                                        to,
                                         ...props
                                     }: React.PropsWithChildren<
     {
@@ -24,10 +27,14 @@ export function HoverBorderGradient({
         duration?: number;
         clockwise?: boolean;
         colorTheme?: ColorTheme;
+        href?: string;
+        to?: string;
     } & React.HTMLAttributes<HTMLElement>
 >) {
     const [hovered, setHovered] = useState<boolean>(false);
     const [direction, setDirection] = useState<Direction>("TOP");
+    const Component = href || to ? Link : Tag;
+    const linkProps = href ? { href } : to ? { to } : {};
 
     const rotateDirection = (currentDirection: Direction): Direction => {
         const directions: Direction[] = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
@@ -73,20 +80,21 @@ export function HoverBorderGradient({
         }
     }, [hovered]);
     return (
-        <Tag
+        <Component
+            {...linkProps}
             onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {
                 setHovered(true);
             }}
             onMouseLeave={() => setHovered(false)}
             className={cn(
-                "relative flex rounded-full border border-slate-50  content-center bg-transparent items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
+                "relative flex rounded-full border border-slate-50  content-center bg-transparent items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit no-underline",
                 containerClassName
             )}
             {...props}
         >
             <div
                 className={cn(
-                    "w-auto text-white z-10 bg-transparent px-4 py-2 rounded-[inherit]",
+                    "w-auto text-white z-10 bg-transparent px-4 py-2 rounded-[inherit] text-[13px] no-underline",
                     className
                 )}
             >
@@ -111,6 +119,6 @@ export function HoverBorderGradient({
                 transition={{ease: "linear", duration: duration ?? 1}}
             />
             <div className="bg-slate-50 absolute z-1 flex-none inset-[2px] rounded-[100px]"/>
-        </Tag>
+        </Component>
     );
 }
