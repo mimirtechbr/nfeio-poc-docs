@@ -3,6 +3,7 @@ import {AnimatePresence, motion} from "motion/react";
 import {cn} from "@site/lib/utils";
 import "./FlipWords.scss";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import {HoverBorderGradient} from "@site/src/components/AceternityUI/HoverBorderGradient";
 
 const FlipWords = ({words, duration = 3000, className}) => {
     const [currentWord, setCurrentWord] = useState(words[0]);
@@ -111,7 +112,7 @@ export default function FlipWordsHero() {
                     <FlipWords words={words}/>
                     <br/>
                     da{" "}
-                    <span className="bg-gradient-to-r from-primary-400 to-secondary inline-block text-transparent bg-clip-text drop-shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                    <span className="bg-gradient-to-r from-primary-400 to-secondary inline-block text-transparent bg-clip-text drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">
             {siteConfig.organizationName}
           </span>
                 </div>
@@ -130,12 +131,17 @@ export default function FlipWordsHero() {
                 >
                     {siteConfig.tagline}
                 </motion.p>
-                <button
-                    className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 hover:pointer-cursor">
-                    <a className="explore-dev-docs-btn" href="#developer-docs-section">
-                        Explore Developer Docs
-                    </a>
-                </button>
+                <div className="flex justify-center text-center mt-4">
+                    <HoverBorderGradient
+                        containerClassName="rounded-full"
+                        as="button"
+                        className="bg-transparent text-black flex items-center space-x-2"
+                        colorTheme="green"
+                        to={'/documentacao'}
+                    >
+                        <span>Acesse a Documentação Completa</span>
+                    </HoverBorderGradient>
+                </div>
             </motion.div>
         </>
     );
