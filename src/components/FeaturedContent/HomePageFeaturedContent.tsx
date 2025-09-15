@@ -22,7 +22,7 @@ function SidebarCard({title, description, items, colorClass = 'primary'}) {
                 <ul className="list-none space-y-2">
                     {items.map((item, idx) => (
                         <li key={idx} className="flex items-center space-x-2">
-                            <DocumentTextIcon className="h-5 w-5 text-gray-500"/>
+                            <DocumentTextIcon className="flex-shrink-0 size-6 text-gray-500"/>
                             <Link to={item.to} className="text-gray-800 hover:underline font-medium">
                                 {item.label}
                             </Link>
