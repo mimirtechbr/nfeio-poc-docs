@@ -214,12 +214,22 @@ const config: Config = {
                     sidebarId: 'cityHallsSidebar',
                 },
                 {
-                    type: 'localeDropdown',
+                    href: 'https://app.nfe.io/',
+                    label: 'Cadastre-se',
                     position: 'right',
                 },
                 {
-                    href: 'https://github.com/nfe',
-                    label: 'GitHub',
+                    href: 'https://nfe.io/contato/',
+                    label: 'Contato',
+                    position: 'right',
+                },
+                {
+                    href: 'https://nfe.io/',
+                    label: 'NFe.io',
+                    position: 'right',
+                },
+                {
+                    type: 'localeDropdown',
                     position: 'right',
                 },
             ],
