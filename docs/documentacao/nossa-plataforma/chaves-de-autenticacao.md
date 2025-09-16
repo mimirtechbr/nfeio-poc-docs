@@ -7,7 +7,7 @@ sidebar_label: Chaves de autenticação
 last_update:
   date: 2020-10-29
 title: Chaves de autenticação (API Keys)
-image: https://nfe.io/docs/app/uploads/2020/09/account-page.png
+image: https://docs.nfe.io/app/uploads/2020/09/account-page.png
 description: Nesta documentação você irá aprender como utilizar as chaves de
   autenticação (API Keys) da plataforma da NFE.io.
 migration_info:
@@ -60,11 +60,11 @@ Neste passo, temos duas chaves disponíveis:
 [2]: #1%5FMenu%5Fconta
 [3]: #2%5FChaves%5Fdisponiveis
 [4]: https://nfe.io/docs
-[5]: https://nfe.io/docs/documentacao/nossa-plataforma/chaves-de-autenticacao/#1%5FMenu%5Fconta
-[6]: https://nfe.io/docs/documentacao/nossa-plataforma/chaves-de-autenticacao/#2%5FChaves%5Fdisponiveis
-[7]: https://nfe.io/docs/nossa-plataforma/criar-conta/
-[8]: https://nfe.io/docs/nossa-plataforma/criar-empresa/
-[9]: https://nfe.io/docs/nossa-plataforma/upload-certificado/
-[10]: https://nfe.io/docs/nossa-plataforma/nota-fiscal-servico/emitir-nota-servico/
-[11]: https://nfe.io/docs/nossa-plataforma/nota-fiscal-servico/listar-notas-servico/
-[12]: https://nfe.io/docs/nossa-plataforma/nota-fiscal-servico/cancelar-nota-servico/
+[5]: https://docs.nfe.io/documentacao/nossa-plataforma/chaves-de-autenticacao/#1%5FMenu%5Fconta
+[6]: https://docs.nfe.io/documentacao/nossa-plataforma/chaves-de-autenticacao/#2%5FChaves%5Fdisponiveis
+[7]: https://docs.nfe.io/documentacao/nossa-plataforma/criar-conta/
+[8]: https://docs.nfe.io/documentacao/nossa-plataforma/criar-empresa/
+[9]: https://docs.nfe.io/documentacao/nossa-plataforma/upload-certificado/
+[10]: https://docs.nfe.io/documentacao/nossa-plataforma/nota-fiscal-servico/emitir-nota-servico/
+[11]: https://docs.nfe.io/documentacao/nossa-plataforma/nota-fiscal-servico/listar-notas-servico/
+[12]: https://docs.nfe.io/documentacao/nossa-plataforma/nota-fiscal-servico/cancelar-nota-servico/
