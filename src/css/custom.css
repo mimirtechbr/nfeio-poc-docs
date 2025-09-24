@@ -1,275 +1,338 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import "tailwindcss/utilities.css" layer(utilities);
 
 /* Tell Tailwind where to scan for class usage */
 @source "../**/*.{js,jsx,ts,tsx,mdx}";
 
 @layer base {
-  #tw-scope {
-    @import "tailwindcss/preflight.css" layer(base);
-  }
+    #tw-scope {
+        @import "tailwindcss/preflight.css" layer(base);
+    }
 }
-@import "tailwindcss/utilities.css" layer(utilities);
+
 
 @custom-variant dark (&:is([data-theme="dark"] *));
 
 @theme inline {
-  /* Configure your theme variables here */
-  --font-display: "Roboto", "sans-serif";
-  --spacing: 0.25rem;
-  /* Override default Tailwind colors */
-  --color-blue-500: #005097; /* Your primary blue */
-  --color-green-500: #00D16C; /* Your secondary green */
+    /* Configure your theme variables here */
+    --font-display: "Roboto", "sans-serif";
+    --spacing: 0.25rem;
+    /* Override default Tailwind colors */
+    --color-blue-500: #005097; /* Your primary blue */
+    --color-green-500: #00D16C; /* Your secondary green */
+    /* Core color scales */
+    --color-slate-50: #f8fafc;
+    --color-slate-900: #0f172a;
 
-  /* Core color scales */
-  --color-slate-50: #f8fafc;
-  --color-slate-900: #0f172a;
+    /* Named semantic colors */
+    --color-primary: var(--color-blue-500);
+    --color-secondary: var(--color-green-500);
 
-  /* Named semantic colors */
-  --color-primary: var(--color-blue-500);
-  --color-secondary: var(--color-green-500);
-
-  /* You can also define complete color scales */
-  --color-primary-50: #e6f0f9;
-  --color-primary-100: #cce1f3;
-  --color-primary-200: #99c3e7;
-  --color-primary-300: #66a5db;
-  --color-primary-400: #3387cf;
-  --color-primary-500: #005097; /* Base primary */
-  --color-primary-600: #004888;
-  --color-primary-700: #003666;
-  --color-primary-800: #002444;
-  --color-primary-900: #001222;
+    /* You can also define complete color scales */
+    --color-primary-50: #e6f0f9;
+    --color-primary-100: #cce1f3;
+    --color-primary-200: #99c3e7;
+    --color-primary-300: #66a5db;
+    --color-primary-400: #3387cf;
+    --color-primary-500: #005097; /* Base primary */
+    --color-primary-600: #004888;
+    --color-primary-700: #003666;
+    --color-primary-800: #002444;
+    --color-primary-900: #001222;
+    --color-secondary-900: var(--ifm-background-color);
 }
 
 @font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Archivo";
-  font-display: swap;
+    font-family: "Archivo";
+    font-display: swap;
 }
 
 html:has(body):has(div):has(div):has(.homepage) {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 
 /* You can override the default Infima variables here. */
 :root {
-  /* Cores primárias da NFE.io */
-  --ifm-color-primary: #005097;
-  --ifm-color-primary-dark: #004888;
-  --ifm-color-primary-darker: #004480;
-  --ifm-color-primary-darkest: #00386a;
-  --ifm-color-primary-light: #0058a6;
-  --ifm-color-primary-lighter: #005cae;
-  --ifm-color-primary-lightest: #0068c4;
-  --ifm-background-color: #fcfcfc;
+    /* Cores primárias da NFE.io */
+    --ifm-color-primary: #005097;
+    --ifm-color-primary-dark: #004888;
+    --ifm-color-primary-darker: #004480;
+    --ifm-color-primary-darkest: #00386a;
+    --ifm-color-primary-light: #0058a6;
+    --ifm-color-primary-lighter: #005cae;
+    --ifm-color-primary-lightest: #0068c4;
+    --ifm-background-color: #fcfcfc;
 
-  /*#F0F4F5*/
-  /* Cores secundárias */
-  --ifm-color-secondary: #00D16C; /* Verde NFE.io */
-  --ifm-color-secondary-dark: #00BC61;
-  --ifm-color-secondary-darker: #00A755;
-  --ifm-color-secondary-darkest: #008A47;
-  --ifm-color-secondary-light: #0EE67B;
-  --ifm-color-secondary-lighter: #33EE93;
-  --ifm-color-secondary-lightest: #66F2AD;
+    /*#F0F4F5*/
+    /* Cores secundárias */
+    --ifm-color-secondary: #00D16C; /* Verde NFE.io */
+    --ifm-color-secondary-dark: #00BC61;
+    --ifm-color-secondary-darker: #00A755;
+    --ifm-color-secondary-darkest: #008A47;
+    --ifm-color-secondary-light: #0EE67B;
+    --ifm-color-secondary-lighter: #33EE93;
+    --ifm-color-secondary-lightest: #66F2AD;
 
-  /* Cores neutras */
-  --ifm-color-gray-100: #f5f6f7;
-  --ifm-color-gray-200: #ebedf0;
-  --ifm-color-gray-300: #dadde1;
-  --ifm-color-gray-400: #ccd0d5;
-  --ifm-color-gray-500: #a4a9b3;
-  --ifm-color-gray-600: #747a86;
-  --ifm-color-gray-700: #444950;
-  --ifm-color-gray-800: #2f3136;
-  --ifm-color-gray-900: #1c1e21;
+    /* Cores neutras */
+    --ifm-color-gray-100: #f5f6f7;
+    --ifm-color-gray-200: #ebedf0;
+    --ifm-color-gray-300: #dadde1;
+    --ifm-color-gray-400: #ccd0d5;
+    --ifm-color-gray-500: #a4a9b3;
+    --ifm-color-gray-600: #747a86;
+    --ifm-color-gray-700: #444950;
+    --ifm-color-gray-800: #2f3136;
+    --ifm-color-gray-900: #1c1e21;
 
-  /* Typography */
-  --ifm-font-family-base: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  --ifm-font-family-heading: 'Archivo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  --ifm-heading-font-weight: 400;
+    /* Typography */
+    --ifm-font-family-base: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --ifm-font-family-heading: 'Archivo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --ifm-heading-font-weight: 400;
 
-  /* Heading Sizes */
-  --ifm-h1-font-size: 56px;
-  --ifm-h2-font-size: 40px;
-  --ifm-h3-font-size: 32px;
-  --ifm-h4-font-size: 24px;
-  --ifm-h5-font-size: 18px;
-  --ifm-h6-font-size: 16px;
+    /* Heading Sizes */
+    --ifm-h1-font-size: 56px;
+    --ifm-h2-font-size: 40px;
+    --ifm-h3-font-size: 32px;
+    --ifm-h4-font-size: 24px;
+    --ifm-h5-font-size: 18px;
+    --ifm-h6-font-size: 16px;
 
-  /* Heading Line Heights */
-  --ifm-heading-line-height: 1.3;
+    /* Heading Line Heights */
+    --ifm-heading-line-height: 1.3;
 
-  /* Body Typography */
-  --ifm-font-size-base: 16px;
-  --ifm-line-height-base: 1.5;
+    /* Body Typography */
+    --ifm-font-size-base: 16px;
+    --ifm-line-height-base: 1.5;
 
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  /*largura da sidebar*/
-  --doc-sidebar-width: 360px;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    /*largura da sidebar*/
+    --doc-sidebar-width: 360px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #79ea53;
-  --ifm-color-primary-dark: #63e737;
-  --ifm-color-primary-darker: #58e529;
-  --ifm-color-primary-darkest: #44c618;
-  --ifm-color-primary-light: #8fed6f;
-  --ifm-color-primary-lighter: #9aef7d;
-  --ifm-color-primary-lightest: #bbf4a8;
-  --ifm-background-color: #103541;
-  /*navbar*/
-  --ifm-navbar-background-color: #303846;
-  /*footer*/
-  --ifm-footer-background-color: #303846;
-  /*TOC line color*/
-  --ifm-toc-border-color: #2a5a4b;
+    --ifm-color-primary: #79ea53;
+    --ifm-color-primary-dark: #63e737;
+    --ifm-color-primary-darker: #58e529;
+    --ifm-color-primary-darkest: #44c618;
+    --ifm-color-primary-light: #8fed6f;
+    --ifm-color-primary-lighter: #9aef7d;
+    --ifm-color-primary-lightest: #bbf4a8;
+    --ifm-background-color: #103541;
+    /*navbar #303846*/
+    --ifm-navbar-background-color: var(--ifm-background-color);
+    /*footer*/
+    --ifm-footer-background-color: var(--ifm-background-color);
+    /*TOC line color*/
+    --ifm-toc-border-color: #2a5a4b;
 
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  /* API Explorer send button */
-  .openapi-explorer__request-btn {
-    background-color: var(--ifm-color-success) !important;
-  }
+    /* API Explorer send button */
 
-  .openapi-explorer__request-btn:hover {
-    background-color: var(--ifm-color-success-light) !important;
-  }
+    .openapi-explorer__request-btn {
+        background-color: var(--ifm-color-success) !important;
+    }
+
+    .openapi-explorer__request-btn:hover {
+        background-color: var(--ifm-color-success-light) !important;
+    }
 
 }
 
 /* background com gradiente linear, uso: <div class="nfeio-bg-gradient">...</div> */
 .nfeio-bg-gradient {
-  background: #5DCFF2;
-  background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
+    background: #5DCFF2;
+    background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
 }
 
 /* Borda com gradiente linear, uso: <div class="nfeio-border-gradient">...</div> */
 .nfeio-border-gradient {
-  position: relative;
-  z-index: 0;
+    position: relative;
+    z-index: 0;
 }
+
 .nfeio-border-gradient::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 2px; /* espessura da borda, ajuste conforme necessário */
-  border-radius: inherit;
-  background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px; /* espessura da borda, ajuste conforme necessário */
+    border-radius: inherit;
+    background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: -1;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* Para garantir que o conteúdo tenha fundo, use bg-white ou similar na div interna */
 .nfeio-border-gradient > * {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 /* Borda superior com gradiente linear, 4px, uso: <div class="nfeio-border-t-gradient-4">...</div> */
 .nfeio-border-t-gradient-4 {
-  position: relative;
-  z-index: 0;
-}
-.nfeio-border-t-gradient-4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 4px; /* igual ao border-t-4 */
-  background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-  z-index: 1;
-  pointer-events: none;
+    position: relative;
+    z-index: 0;
 }
 
-/* MENU STYLES */
+.nfeio-border-t-gradient-4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px; /* igual ao border-t-4 */
+    background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* MAIN MENU DROPDOWN STYLES */
+.dropdown > .navbar__link {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown > .navbar__link:after {
+    content: '';
+    border: none;
+    position: static;
+    top: auto;
+    transform: none;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%23888888'/%3E%3C/svg%3E");
+    background-size: 12px;
+    background-repeat: no-repeat;
+}
+
+html[data-theme='dark'] .dropdown > .navbar__link:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+.dropdown:hover > .navbar__link:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%2379EA53'/%3E%3C/svg%3E") !important;
+}
+
+html[data-theme='dark']  .nfe-dropdown a:hover {
+    color: var(--ifm-color-secondary);
+}
+
+@layer components {
+    .nfe-dropdown a {
+        @apply no-underline;
+    }
+
+    .nfe-dropdown + ul.dropdown__menu {
+        @apply bg-secondary-900 p-0;
+    }
+    .resources-dropdown-menu a {
+        @apply flex items-center gap-2;
+    }
+    .resources-dropdown-menu h2 {
+        @apply text-sm font-semibold;
+    }
+
+}
+
+/* END MAIN MENU DROPDOWN STYLES */
+
+/*external url icon removal*/
+[class*='iconExternalLink_'] {
+    display: none;
+}
+/*external url icon removal*/
+
+/* SIDEBAR MENU STYLES */
 /*level 2 */
 .theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-2.menu__list-item .menu__link {
-  /*font-size: 14px;*/
-}
-/*level 3*/
-.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-item .menu__link {
-  font-size: 14px;
+    /*font-size: 14px;*/
 }
 
-/* MENU STYLES */
+/*level 3*/
+.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-item .menu__link {
+    font-size: 14px;
+}
+
+/* END SIDEBAR MENU STYLES */
 
 /* OpenAPI Docs Method Badges */
 .api-method > .menu__link,
 .schema > .menu__link {
-  align-items: center;
-  justify-content: start;
+    align-items: center;
+    justify-content: start;
 }
+
 .api-method > .menu__link::before,
 .schema > .menu__link::before {
-  width: 55px;
-  height: 20px;
-  font-size: 11px;
-  line-height: 20px;
-  text-transform: uppercase;
-  font-weight: 600;
-  border-radius: 0.25rem;
-  border: 1px solid;
-  margin-right: var(--ifm-spacing-horizontal);
-  text-align: center;
-  flex-shrink: 0;
-  border-color: transparent;
-  color: white;
+    /*width: 55px;*/
+    /*height: 20px;*/
+    font-size: 11px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    /*border-radius: 0.25rem;*/
+    /*border: 1px solid;*/
+    margin-right: var(--ifm-spacing-horizontal);
+    text-align: center;
+    flex-shrink: 0;
+    /*border-color: transparent;*/
+    color: white;
 }
+
 .get > .menu__link::before {
-  content: "get";
-  background-color: var(--ifm-color-primary);
+    content: "get";
+    color: var(--ifm-color-primary);
 }
+
 .post > .menu__link::before {
-  content: "post";
-  background-color: var(--openapi-code-green);
+    content: "post";
+    color: var(--openapi-code-green);
 }
 
 .delete > .menu__link::before {
-  content: "del";
-  background-color: var(--openapi-code-red);
+    content: "del";
+    color: var(--openapi-code-red);
 }
 
 .put > .menu__link::before {
-  content: "put";
-  background-color: var(--openapi-code-blue);
+    content: "put";
+    color: var(--openapi-code-blue);
 }
 
 .patch > .menu__link::before {
-  content: "patch";
-  background-color: var(--openapi-code-orange);
+    content: "patch";
+    color: var(--openapi-code-orange);
 }
 
 .head > .menu__link::before {
-  content: "head";
-  background-color: var(--ifm-color-secondary-darkest);
+    content: "head";
+    color: var(--ifm-color-secondary-darkest);
 }
 
 .event > .menu__link::before {
-  content: "event";
-  background-color: var(--ifm-color-secondary-darkest);
+    content: "event";
+    color: var(--ifm-color-secondary-darkest);
 }
 
 .schema > .menu__link::before {
-  content: "schema";
-  background-color: var(--ifm-color-secondary-darkest);
+    content: "schema";
+    color: var(--ifm-color-secondary-darkest);
 }
 
 /* END OpenAPI Docs Method Badges */
