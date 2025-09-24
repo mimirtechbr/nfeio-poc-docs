@@ -9,7 +9,7 @@ sidebar_label: Introdução
 # Introdução à REST API NFe.io
 
 :::warning
-revisao pendente
+Introducao pendente de revisao
 :::
 
 Bem-vindo à documentação da API REST da NFe.io. Aqui você encontra como autenticar, consumir endpoints, lidar com erros, aplicar boas práticas de segurança e acelerar sua integração para emissão, consulta e gestão de documentos fiscais e dados cadastrais.
