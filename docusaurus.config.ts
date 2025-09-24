@@ -6,6 +6,9 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+import fs from 'fs';
+const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
+
 const config: Config = {
     title: 'NFE.io Documentação',
     tagline: 'Explore a extensa documentação do NFE. Você vai encontrar aqui documentação sobre a plataforma, referência para as APIs e bibliotecas para desenvolvimento.',
@@ -17,7 +20,9 @@ const config: Config = {
     },
 
     // Set the production url of your site here
-    url: 'https://nfeiodocspoc-docusaurus-rwqd4c.ctb-1-eu-east-1.cloudainer.com',
+    url: process.env.GH_PAGES_URL
+        ? process.env.GH_PAGES_URL
+        : process.env.CI_PAGES_URL ?? "https://docs.nfe.io",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
@@ -208,20 +213,23 @@ const config: Config = {
 
                 },
                 {
-                    label: "Prefeituras Integradas",
-                    position: "left",
-                    type: 'docSidebar',
-                    sidebarId: 'cityHallsSidebar',
+                    label: 'Recursos',
+                    type: 'dropdown',
+                    className: 'tw-scope nfe-dropdown resources-dropdown',
+                    position: 'left',
+                    items: [
+                        {
+                            type: 'html',
+                            value: resourcesHTML,
+                            className: 'nfe-dropdown',
+                        },
+                    ],
                 },
                 {
                     href: 'https://app.nfe.io/',
                     label: 'Cadastre-se',
                     position: 'right',
-                },
-                {
-                    href: 'https://nfe.io/contato/',
-                    label: 'Contato',
-                    position: 'right',
+                    className: 'px-8 py-2 rounded-md bg-primary-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-primary-500',
                 },
                 {
                     href: 'https://nfe.io/',
