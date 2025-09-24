@@ -1,7 +1,7 @@
 ---
 sidebar_label: "Pessoa Física"
 sidebar_position: 1
-slug: pessoa-fisica-3
+slug: pessoa-fisica
 date: 2020-09-21
 last_update:
   date: 2020-10-26
@@ -14,10 +14,6 @@ migration_info:
   source: "WordPress"
   source_id: 542
 ---
-
-* [Consulta de dados de Pessoa Física][1]  
-   * [Quais dados você consegue acessar][2]  
-   * [Como faço para ter acesso à documentação da API?][3]
 
 # Consulta de dados de Pessoa Física
 

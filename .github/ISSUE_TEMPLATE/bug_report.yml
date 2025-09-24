@@ -1,0 +1,61 @@
+name: Reporte de Bug
+description: Reporte um problema encontrado na documentação, site ou geração de APIs
+labels: [bug]
+assignees: []
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do problema
+      description: Explique claramente o que está acontecendo.
+      placeholder: Ex. Link quebrado na página X, componente Y com erro em mobile, API Z gerando 404…
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para reproduzir
+      description: Liste os passos para reproduzir o problema.
+      placeholder: |
+        1. Acesse …
+        2. Clique em …
+        3. Observe …
+    validations:
+      required: true
+  - type: input
+    id: esperado
+    attributes:
+      label: Comportamento esperado
+      placeholder: O que você esperava que acontecesse?
+    validations:
+      required: true
+  - type: textarea
+    id: atual
+    attributes:
+      label: Comportamento atual
+      placeholder: O que acontece hoje?
+    validations:
+      required: true
+  - type: textarea
+    id: ambiente
+    attributes:
+      label: Ambiente
+      description: Informe detalhes relevantes do ambiente.
+      placeholder: Navegador/OS, versão do Node, etc.
+    validations:
+      required: false
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências (prints/logs)
+      placeholder: Anexe imagens ou logs que ajudem na análise.
+    validations:
+      required: false
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      placeholder: Informações extras que possam ajudar.
+    validations:
+      required: false
+

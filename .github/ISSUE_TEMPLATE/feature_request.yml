@@ -1,0 +1,43 @@
+name: Solicitação de Funcionalidade
+description: Proponha uma melhoria de documentação, UI ou integração de API
+labels: [enhancement]
+assignees: []
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Qual a necessidade, problema ou oportunidade que motivou a sugestão?
+      placeholder: Explique o cenário atual e por que a melhoria é necessária.
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Proposta
+      description: Descreva a solução sugerida.
+      placeholder: Ex. Nova seção em Documentação, melhorar navegação em REST API, adicionar exemplo cURL…
+    validations:
+      required: true
+  - type: textarea
+    id: impacto
+    attributes:
+      label: Impacto esperado
+      description: Qual o efeito positivo para usuários/clientes/mantenedores?
+    validations:
+      required: false
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+      description: Liste abordagens alternativas avaliadas.
+    validations:
+      required: false
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referências
+      description: Links, benchmarks, exemplos inspiradores.
+    validations:
+      required: false
+

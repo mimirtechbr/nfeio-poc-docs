@@ -1,4 +1,63 @@
+@import "tailwindcss/theme.css" layer(theme);
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Tell Tailwind where to scan for class usage */
+@source "../**/*.{js,jsx,ts,tsx,mdx}";
+
+@layer base {
+    #tw-scope {
+        @import "tailwindcss/preflight.css" layer(base);
+    }
+}
+
+
+@custom-variant dark (&:is([data-theme="dark"] *));
+
+@theme inline {
+    /* Configure your theme variables here */
+    --font-display: "Roboto", "sans-serif";
+    --spacing: 0.25rem;
+    /* Override default Tailwind colors */
+    --color-blue-500: #005097; /* Your primary blue */
+    --color-green-500: #00D16C; /* Your secondary green */
+    /* Core color scales */
+    --color-slate-50: #f8fafc;
+    --color-slate-900: #0f172a;
+
+    /* Named semantic colors */
+    --color-primary: var(--color-blue-500);
+    --color-secondary: var(--color-green-500);
+
+    /* You can also define complete color scales */
+    --color-primary-50: #e6f0f9;
+    --color-primary-100: #cce1f3;
+    --color-primary-200: #99c3e7;
+    --color-primary-300: #66a5db;
+    --color-primary-400: #3387cf;
+    --color-primary-500: #005097; /* Base primary */
+    --color-primary-600: #004888;
+    --color-primary-700: #003666;
+    --color-primary-800: #002444;
+    --color-primary-900: #001222;
+    --color-secondary-900: var(--ifm-background-color);
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Archivo";
+    font-display: swap;
+}
+
+html:has(body):has(div):has(div):has(.homepage) {
+    scroll-behavior: smooth;
+}
 
 
 /* You can override the default Infima variables here. */
@@ -69,16 +128,17 @@
     --ifm-color-primary-lighter: #9aef7d;
     --ifm-color-primary-lightest: #bbf4a8;
     --ifm-background-color: #103541;
-    /*navbar*/
-    --ifm-navbar-background-color: #303846;
+    /*navbar #303846*/
+    --ifm-navbar-background-color: var(--ifm-background-color);
     /*footer*/
-    --ifm-footer-background-color: #303846;
+    --ifm-footer-background-color: var(--ifm-background-color);
     /*TOC line color*/
     --ifm-toc-border-color: #2a5a4b;
 
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
     /* API Explorer send button */
+
     .openapi-explorer__request-btn {
         background-color: var(--ifm-color-success) !important;
     }
@@ -89,121 +149,127 @@
 
 }
 
-/* Typography Styles based on Figma */
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--ifm-font-family-heading);
+/* background com gradiente linear, uso: <div class="nfeio-bg-gradient">...</div> */
+.nfeio-bg-gradient {
+    background: #5DCFF2;
+    background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
 }
 
-h1 {
-    font-weight: 400;
-    letter-spacing: -2.68%;
+/* Borda com gradiente linear, uso: <div class="nfeio-border-gradient">...</div> */
+.nfeio-border-gradient {
+    position: relative;
+    z-index: 0;
 }
 
-h2 {
-    font-weight: 500;
-    letter-spacing: -1.25%;
+.nfeio-border-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px; /* espessura da borda, ajuste conforme necessário */
+    border-radius: inherit;
+    background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
 }
 
-h3 {
-    font-weight: 400;
+/* Para garantir que o conteúdo tenha fundo, use bg-white ou similar na div interna */
+.nfeio-border-gradient > * {
+    position: relative;
+    z-index: 1;
 }
 
-h4 {
-    font-weight: 600;
-    letter-spacing: -1.04%;
+/* Borda superior com gradiente linear, 4px, uso: <div class="nfeio-border-t-gradient-4">...</div> */
+.nfeio-border-t-gradient-4 {
+    position: relative;
+    z-index: 0;
 }
 
-h5 {
-    font-weight: 500;
+.nfeio-border-t-gradient-4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px; /* igual ao border-t-4 */
+    background: linear-gradient(45deg, rgba(93, 207, 242, 1) 0%, rgba(121, 234, 83, 1) 100%);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    z-index: 1;
+    pointer-events: none;
 }
 
-h6 {
-    font-weight: 600;
+/* MAIN MENU DROPDOWN STYLES */
+.dropdown > .navbar__link {
+    display: flex;
+    align-items: center;
 }
 
-/* Subtitles */
-.subtitle-1 {
-    font-family: var(--ifm-font-family-heading);
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 1.5;
+.dropdown > .navbar__link:after {
+    content: '';
+    border: none;
+    position: static;
+    top: auto;
+    transform: none;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%23888888'/%3E%3C/svg%3E");
+    background-size: 12px;
+    background-repeat: no-repeat;
 }
 
-.subtitle-2 {
-    font-family: var(--ifm-font-family-heading);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
+html[data-theme='dark'] .dropdown > .navbar__link:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 
-/* Body Text */
-.body-1 {
-    font-family: var(--ifm-font-family-base);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 1.5625%;
+.dropdown:hover > .navbar__link:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414Z' fill='%2379EA53'/%3E%3C/svg%3E") !important;
 }
 
-.body-2 {
-    font-family: var(--ifm-font-family-base);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 1.7857%;
+html[data-theme='dark']  .nfe-dropdown a:hover {
+    color: var(--ifm-color-secondary);
 }
 
-/* Captions */
-.caption {
-    font-family: var(--ifm-font-family-base);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 3.33%;
+@layer components {
+    .nfe-dropdown a {
+        @apply no-underline;
+    }
+
+    .nfe-dropdown + ul.dropdown__menu {
+        @apply bg-secondary-900 p-0;
+    }
+    .resources-dropdown-menu a {
+        @apply flex items-center gap-2;
+    }
+    .resources-dropdown-menu h2 {
+        @apply text-sm font-semibold;
+    }
+
 }
 
-/* Overline */
-.overline {
-    font-family: var(--ifm-font-family-base);
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 15%;
-    text-transform: uppercase;
-}
+/* END MAIN MENU DROPDOWN STYLES */
 
-/* Button Labels */
-.label-16 {
-    font-family: var(--ifm-font-family-base);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 1.5625%;
-    text-transform: uppercase;
+/*external url icon removal*/
+[class*='iconExternalLink_'] {
+    display: none;
 }
+/*external url icon removal*/
 
-.label-14 {
-    font-family: var(--ifm-font-family-base);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 1.7857%;
-    text-transform: uppercase;
-}
-
-/* MENU STYLES */
+/* SIDEBAR MENU STYLES */
 /*level 2 */
 .theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-2.menu__list-item .menu__link {
     /*font-size: 14px;*/
 }
+
 /*level 3*/
 .theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-3.menu__list-item .menu__link {
     font-size: 14px;
 }
 
-/* MENU STYLES */
+/* END SIDEBAR MENU STYLES */
 
 /* OpenAPI Docs Method Badges */
 .api-method > .menu__link,
@@ -211,57 +277,62 @@ h6 {
     align-items: center;
     justify-content: start;
 }
+
 .api-method > .menu__link::before,
 .schema > .menu__link::before {
-    width: 55px;
-    height: 20px;
+    /*width: 55px;*/
+    /*height: 20px;*/
     font-size: 11px;
     line-height: 20px;
     text-transform: uppercase;
     font-weight: 600;
-    border-radius: 0.25rem;
-    border: 1px solid;
+    /*border-radius: 0.25rem;*/
+    /*border: 1px solid;*/
     margin-right: var(--ifm-spacing-horizontal);
     text-align: center;
     flex-shrink: 0;
-    border-color: transparent;
+    /*border-color: transparent;*/
     color: white;
 }
+
 .get > .menu__link::before {
     content: "get";
-    background-color: var(--ifm-color-primary);
+    color: var(--ifm-color-primary);
 }
+
 .post > .menu__link::before {
     content: "post";
-    background-color: var(--openapi-code-green);
+    color: var(--openapi-code-green);
 }
 
 .delete > .menu__link::before {
     content: "del";
-    background-color: var(--openapi-code-red);
+    color: var(--openapi-code-red);
 }
 
 .put > .menu__link::before {
     content: "put";
-    background-color: var(--openapi-code-blue);
+    color: var(--openapi-code-blue);
 }
 
 .patch > .menu__link::before {
     content: "patch";
-    background-color: var(--openapi-code-orange);
+    color: var(--openapi-code-orange);
 }
 
 .head > .menu__link::before {
     content: "head";
-    background-color: var(--ifm-color-secondary-darkest);
+    color: var(--ifm-color-secondary-darkest);
 }
 
 .event > .menu__link::before {
     content: "event";
-    background-color: var(--ifm-color-secondary-darkest);
+    color: var(--ifm-color-secondary-darkest);
 }
 
 .schema > .menu__link::before {
     content: "schema";
-    background-color: var(--ifm-color-secondary-darkest);
+    color: var(--ifm-color-secondary-darkest);
 }
+
+/* END OpenAPI Docs Method Badges */

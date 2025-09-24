@@ -1,6 +1,7 @@
 ---
 title: Automatize a emissão de notas fiscais de serviço NFS-e com WHMCS e NFE.io
-sidebar_label: WHMCS
+sidebar_label: Introdução
+slug: /integracoes/plugins/whmcs
 sidebar_position: 1
 ---
 # WHMCS

@@ -4,6 +4,8 @@ slug: introducao
 sidebar_position: 1
 date: 2020-08-11
 sidebar_label: Introdução
+sidebar_custom_props:
+  in_home: true
 last_update:
   date: 2020-10-26
 title: Introdução à documentação das API's

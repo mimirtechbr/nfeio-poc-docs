@@ -1,18 +1,19 @@
 ---
-sidebar_label: "Criar Conta"
-sidebar_position: 1
+author: Gabriel Marquez
 slug: criar-conta
+sidebar_position: 1
 date: 2020-09-21
+sidebar_label: Criar Conta
 last_update:
   date: 2021-04-09
-title: "Como Criar Conta em nossa plataforma? - NFE.io | Docs"
-description: "Mostraremos aqui, como criar conta em nossa plataforma e como melhor escolher os serviços que melhor lhe atende."
-author: "Gabriel Marquez"
-image: "https://nfe.io/docs/app/uploads/2020/10/create-a-new-account.png"
+title: Como Criar Conta em nossa plataforma?
+image: https://nfe.io/docs/app/uploads/2020/10/create-a-new-account.png
+description: Mostraremos aqui, como criar conta em nossa plataforma e como
+  melhor escolher os serviços que melhor lhe atende.
 migration_info:
-  migrated_on: "2025-08-18 03:18:51"
-  migrated_by: "andrekutianski"
-  source: "WordPress"
+  migrated_on: 2025-08-18 03:18:51
+  migrated_by: andrekutianski
+  source: WordPress
   source_id: 551
 ---
 

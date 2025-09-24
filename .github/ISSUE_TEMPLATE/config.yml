@@ -1,0 +1,9 @@
+blank_issues_disabled: true
+contact_links:
+  - name: Suporte NFe.io
+    url: https://nfe.io/contato/
+    about: Precisa de ajuda com produtos/serviços? Fale com o suporte.
+  - name: Segurança — Reporte privado
+    url: https://github.com/mimirtechbr/nfeio-poc-docs/security/advisories
+    about: Para vulnerabilidades, use Security Advisories ou canais internos.
+

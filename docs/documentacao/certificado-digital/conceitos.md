@@ -1,6 +1,8 @@
 ---
 sidebar_label: "Conceitos"
 sidebar_position: 1
+sidebar_custom_props:
+  in_home: 'true'
 slug: conceitos
 date: 2020-09-14
 last_update:

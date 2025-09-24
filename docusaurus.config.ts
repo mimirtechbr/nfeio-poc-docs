@@ -6,8 +6,11 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+import fs from 'fs';
+const resourcesHTML = fs.readFileSync('./src/snippets/resources.html', 'utf-8');
+
 const config: Config = {
-    title: 'NFe.io Documentação',
+    title: 'NFE.io Documentação',
     tagline: 'Explore a extensa documentação do NFE. Você vai encontrar aqui documentação sobre a plataforma, referência para as APIs e bibliotecas para desenvolvimento.',
     favicon: 'img/favicon.ico',
 
@@ -17,15 +20,17 @@ const config: Config = {
     },
 
     // Set the production url of your site here
-    url: 'https://nfeiodocspoc-docusaurus-rwqd4c.ctb-1-eu-east-1.cloudainer.com',
+    url: process.env.GH_PAGES_URL
+        ? process.env.GH_PAGES_URL
+        : process.env.CI_PAGES_URL ?? "https://docs.nfe.io",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'facebook', // Usually your GitHub org/user name.
-    projectName: 'docusaurus', // Usually your repo name.
+    organizationName: 'NFE.io', // Usually your GitHub org/user name.
+    projectName: 'docs', // Usually your repo name.
 
     onBrokenLinks: 'log',
     onBrokenMarkdownLinks: 'log',
@@ -37,6 +42,8 @@ const config: Config = {
     },
 
     plugins: [
+        "./src/plugins/tailwind-config.js",
+        "docusaurus-plugin-sass",
         [
             "docusaurus-plugin-openapi-docs",
             {
@@ -157,7 +164,9 @@ const config: Config = {
                 docs: false,
                 blog: false,
                 theme: {
-                    customCss: './src/css/custom.css',
+                    customCss: [
+                        './src/css/custom.css',
+                    ],
                 },
             } satisfies Preset.Options,
         ],
@@ -177,6 +186,11 @@ const config: Config = {
                 src: 'img/logo.svg',
             },
             items: [
+                {
+                    to: '/',
+                    position: 'left',
+                    label: 'Início',
+                },
                 {
                     type: 'docSidebar',
                     sidebarId: 'documentationSideBar',
@@ -199,18 +213,31 @@ const config: Config = {
 
                 },
                 {
-                    label: "Prefeituras Integradas",
-                    position: "left",
-                    type: 'docSidebar',
-                    sidebarId: 'cityHallsSidebar',
+                    label: 'Recursos',
+                    type: 'dropdown',
+                    className: 'tw-scope nfe-dropdown resources-dropdown',
+                    position: 'left',
+                    items: [
+                        {
+                            type: 'html',
+                            value: resourcesHTML,
+                            className: 'nfe-dropdown',
+                        },
+                    ],
                 },
                 {
-                    type: 'localeDropdown',
+                    href: 'https://app.nfe.io/',
+                    label: 'Cadastre-se',
+                    position: 'right',
+                    className: 'px-8 py-2 rounded-md bg-primary-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-primary-500',
+                },
+                {
+                    href: 'https://nfe.io/',
+                    label: 'NFe.io',
                     position: 'right',
                 },
                 {
-                    href: 'https://github.com/nfe',
-                    label: 'GitHub',
+                    type: 'localeDropdown',
                     position: 'right',
                 },
             ],
