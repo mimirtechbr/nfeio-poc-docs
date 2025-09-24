@@ -22,7 +22,7 @@ export function IntegrationLayout({children}: PropsWithChildren) {
     const description = fm.heroDescription ?? metadata.description;
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} tw-scope`}>
             <header className={styles.hero}>
                 <div className={styles.heroText}>
                     {fm.provider && <span className={styles.provider}>{fm.provider}</span>}
@@ -30,13 +30,13 @@ export function IntegrationLayout({children}: PropsWithChildren) {
                     {description && <p className={styles.description}>{description}</p>}
                     <div className={styles.metaRow}>
                         {fm.badge && <span className={styles.badge}>{fm.badge}</span>}
-                        {Array.isArray(fm.tags) && fm.tags.length > 0 && (
-                            <ul className={styles.tags}>
-                                {fm.tags.map((t) => (
-                                    <li key={t} className={styles.tagItem}>{t}</li>
-                                ))}
-                            </ul>
-                        )}
+                        {/*{Array.isArray(fm.tags) && fm.tags.length > 0 && (*/}
+                        {/*    <ul className={styles.tags}>*/}
+                        {/*        {fm.tags.map((t) => (*/}
+                        {/*            <li key={t} className={styles.tagItem}>{t}</li>*/}
+                        {/*        ))}*/}
+                        {/*    </ul>*/}
+                        {/*)}*/}
                     </div>
                     {fm.ctaUrl && fm.ctaLabel && (
                         <div className={styles.ctaRow}>
@@ -48,7 +48,7 @@ export function IntegrationLayout({children}: PropsWithChildren) {
                 </div>
                 {fm.heroImage && (
                     <div className={styles.heroImageWrap}>
-                        <img className={styles.heroImage} src={fm.heroImage} alt={title} />
+                        <img className={`${styles.heroImage} bg-primary-500 px-8 py-2 rounded-md hover:border-primary-500`} src={fm.heroImage} alt={title} />
                     </div>
                 )}
             </header>
