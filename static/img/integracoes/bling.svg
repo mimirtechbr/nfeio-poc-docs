@@ -1,0 +1,27 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Bling integration banner</title>
+  <desc id="desc">Generic banner placeholder for Bling integration</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="50%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="800" height="400" rx="16" fill="url(#g)"/>
+  <g filter="url(#shadow)">
+    <rect x="40" y="40" width="720" height="320" rx="12" fill="rgba(255,255,255,0.12)"/>
+  </g>
+  <g fill="#fff">
+    <text x="64" y="160" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif" font-weight="700" font-size="56" letter-spacing="0.5">NFe.io + Bling</text>
+    <text x="64" y="210" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif" font-weight="400" font-size="22" opacity="0.9">Automatize a emissão de NF-e a partir de pedidos e vendas</text>
+  </g>
+  <circle cx="720" cy="100" r="4" fill="#fff" opacity="0.35"/>
+  <circle cx="680" cy="140" r="3" fill="#fff" opacity="0.35"/>
+  <circle cx="740" cy="180" r="3" fill="#fff" opacity="0.35"/>
+  <circle cx="700" cy="220" r="4" fill="#fff" opacity="0.35"/>
+</svg>
+
