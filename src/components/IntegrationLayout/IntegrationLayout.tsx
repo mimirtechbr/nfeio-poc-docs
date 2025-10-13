@@ -22,7 +22,7 @@ export function IntegrationLayout({children}: PropsWithChildren) {
     const description = fm.heroDescription ?? metadata.description;
 
     return (
-        <div className={`${styles.container} tw-scope`}>
+        <div className={`${styles.container} tw-scope container`}>
             <header className={styles.hero}>
                 <div className={styles.heroText}>
                     {fm.provider && <span className={styles.provider}>{fm.provider}</span>}
@@ -47,7 +47,7 @@ export function IntegrationLayout({children}: PropsWithChildren) {
                     )}
                 </div>
                 {fm.heroImage && (
-                    <div className={styles.heroImageWrap}>
+                    <div className={`${styles.heroImageWrap} container max-w-sm`}>
                         <img className={`${styles.heroImage} bg-primary-500 px-8 py-2 rounded-md hover:border-primary-500`} src={fm.heroImage} alt={title} />
                     </div>
                 )}
