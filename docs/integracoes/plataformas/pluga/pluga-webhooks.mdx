@@ -1,0 +1,68 @@
+---
+title: Integração NFe.io + Pluga Webhooks
+description: Integre o NFe.io com o Pluga Webhooks para emitir NF-e/NFS-e automaticamente a partir de eventos recebidos por webhook.
+sidebar_position: 23
+sidebar_label: Pluga Webhooks
+hide_title: true
+layout_type: IntegrationLayout
+provider: Pluga Webhooks
+badge: Pluga
+heroTitle: Integração NFe.io + Pluga Webhooks via Pluga
+heroDescription: Emita NF-e/NFS-e automaticamente a partir de notificações recebidas por webhooks.
+ctaLabel: Ver no Pluga
+ctaUrl: https://pluga.co/ferramentas/nfe-io/integracao/pluga-webhooks/
+heroImage: /img/integracoes/pluga-webhooks-icon.svg
+image: /img/integracoes/pluga-webhooks.svg
+tags:
+  - pluga
+  - webhooks
+  - nfe
+  - nfse
+---
+
+A integração entre **NFe.io** e **Pluga Webhooks** permite emitir automaticamente **NF-e** e **NFS-e** com base nas
+notificações recebidas via webhook — conectando qualquer ferramenta que envie eventos HTTP ao seu fluxo fiscal,
+sem escrever código.
+
+## O que é o Pluga Webhooks?
+
+O **Pluga Webhooks** é o conector da Pluga que recebe notificações (eventos) de outras ferramentas por meio de chamadas
+HTTP e as transforma em dados utilizáveis em automações, permitindo criar fluxos sem integração direta nativa.
+
+## Benefícios da integração NFe.io + Pluga Webhooks
+
+- **Automação por eventos:** Emita **NF-e/NFS-e** assim que um webhook for recebido pelo Pluga.
+- **Flexibilidade máxima:** Conecte sistemas próprios ou ferramentas sem integração nativa na Pluga.
+- **Menos retrabalho:** Evite processos manuais e inconsistências ao mapear os campos de nota diretamente.
+- **Conformidade garantida:** Mantenha as regras fiscais atualizadas no NFe.io, com emissão segura e rastreável.
+
+## Como funciona a integração?
+
+1. **Webhook recebido no Pluga:** Ao receber um evento HTTP (ex.: pedido pago, assinatura criada), o Pluga processa o
+   payload e envia os dados mapeados para o NFe.io.
+2. **Emissão da nota:** O NFe.io utiliza as informações para emitir a **NF-e** ou **NFS-e** conforme sua configuração.
+3. **Acompanhamento:** Você acompanha o status da automação na Pluga e a situação fiscal da nota no NFe.io.
+
+Gatilhos no Pluga Webhooks:
+
+- Webhook recebido
+
+Ações no NFe.io:
+
+- Emitir **NF-e**
+- Emitir **NFS-e**
+
+## Como configurar?
+
+Para configurar a integração entre NFe.io e Pluga Webhooks, siga os passos:
+
+1. Acesse sua conta no [Pluga][1] e selecione a integração **Pluga Webhooks + NFe.io**.
+2. Gere um endpoint de **Webhook** no Pluga e configure sua ferramenta/sistema para enviar o evento HTTP para esse URL.
+3. Conecte sua conta do **NFe.io** informando a chave de API quando solicitado.
+4. Escolha a ação no NFe.io (emitir **NF-e** ou **NFS-e**) e faça o mapeamento dos campos obrigatórios:
+   - Para **NF-e**: destinatário, itens, CFOP, NCM, CST/CSOSN, alíquotas e demais tributos.
+   - Para **NFS-e**: tomador, serviço, município, código de serviço/CNAE, alíquota de ISS, regime de tributação etc.
+5. Salve e ative a automação. Ao enviar um evento de teste para o webhook, a emissão será executada conforme o mapeamento.
+
+[1]: https://pluga.co/ferramentas/nfe-io/integracao/pluga-webhooks/
+
