@@ -1,0 +1,69 @@
+---
+title: Integração NFe.io + Pipefy
+description: Integre o NFe.io com o Pipefy via Pluga para emitir NFS-e automaticamente a partir de cards criados, movidos de fase ou finalizados.
+sidebar_position: 22
+sidebar_label: Pipefy
+hide_title: true
+layout_type: IntegrationLayout
+provider: Pipefy
+badge: Pluga
+heroTitle: Integração NFe.io + Pipefy via Pluga
+heroDescription: Emita NFS-e automaticamente a partir de eventos do Pipefy (cards, fases e finalizações).
+ctaLabel: Ver no Pluga
+ctaUrl: https://pluga.co/ferramentas/nfe-io/integracao/pipefy/
+heroImage: /img/integracoes/pipefy-icon.svg
+image: /img/integracoes/pipefy.svg
+tags:
+  - pluga
+  - pipefy
+  - nfse
+---
+
+A integração entre **NFe.io** e **Pipefy** via **Pluga** permite emitir automaticamente **NFS-e** com base em eventos do seu
+processo — como criação de cards, movimentação de fase e finalização — reduzindo tarefas manuais e garantindo
+conformidade fiscal.
+
+## O que é o Pipefy?
+
+O **Pipefy** é uma plataforma de gestão de processos (BPM/Workflow) que organiza atividades em pipes e fases, permitindo
+padronizar fluxos, automatizar tarefas e centralizar informações do seu time.
+
+## Benefícios da integração NFe.io + Pipefy
+
+- **Emissão automática de NFS-e:** Gere notas de serviço ao criar, mover ou finalizar cards conforme suas regras.
+- **Menos erros operacionais:** Evite digitação duplicada e inconsistências entre plataformas.
+- **Agilidade e conformidade:** Acelere o faturamento mantendo as regras fiscais atualizadas.
+- **Visão integrada:** Centralize o status das automações na Pluga e das notas no NFe.io.
+
+## Como funciona a integração?
+
+1. **Evento no Pipefy:** Quando um card é criado, movido para uma fase específica ou finalizado, a Pluga envia os dados
+   configurados para o NFe.io.
+2. **Emissão da NFS-e:** O NFe.io utiliza as informações do card (tomador/cliente, serviço, valores, município etc.)
+   para emitir a **NFS-e**.
+3. **Acompanhamento:** A automação pode ser monitorada na Pluga e a situação fiscal da nota é consultável no NFe.io.
+
+Gatilhos comuns no Pipefy:
+
+- Card criado
+- Card movido de fase
+- Card finalizado
+
+Ações no NFe.io:
+
+- Emitir **NFS-e**
+
+## Como configurar?
+
+Para configurar a integração entre NFe.io e Pipefy via Pluga, siga os passos abaixo:
+
+1. Acesse sua conta no [Pluga.co][1] e selecione a integração **Pipefy + NFe.io**.
+2. Conecte sua conta do **Pipefy** e autorize o acesso solicitado.
+3. Conecte sua conta do **NFe.io** informando a chave de API quando solicitado.
+4. Escolha o gatilho no Pipefy (ex.: card movido para a fase "Faturar") e a ação no NFe.io (emitir **NFS-e**).
+5. Mapeie os campos obrigatórios da NFS-e: tomador, serviço, município, código de serviço/CNAE, alíquota de ISS,
+   regime tributário e demais regras fiscais compatíveis com sua operação.
+6. Salve e ative a automação para começar a emitir NFS-e automaticamente.
+
+[1]: https://pluga.co/ferramentas/nfe-io/integracao/pipefy/
+
