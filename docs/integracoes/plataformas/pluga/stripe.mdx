@@ -1,0 +1,70 @@
+---
+title: Integração NFe.io + Stripe
+description: Integre o NFe.io com o Stripe via Pluga para emitir NFS-e automaticamente a partir de pagamentos e assinaturas aprovados.
+sidebar_position: 25
+sidebar_label: Stripe
+hide_title: true
+layout_type: IntegrationLayout
+provider: Stripe
+badge: Pluga
+heroTitle: Integração NFe.io + Stripe via Pluga
+heroDescription: Emita NFS-e automaticamente a partir de pagamentos e assinaturas no Stripe.
+ctaLabel: Ver no Pluga
+ctaUrl: https://pluga.co/ferramentas/nfe-io/integracao/stripe/
+heroImage: /img/integracoes/stripe-icon.svg
+image: /img/integracoes/stripe.svg
+tags:
+  - pluga
+  - stripe
+  - nfse
+---
+
+A integração entre **NFe.io** e **Stripe** via **Pluga** permite emitir automaticamente **NFS-e** com base em eventos de
+pagamento e assinaturas — reduzindo tarefas manuais e garantindo conformidade fiscal no seu negócio.
+
+## O que é o Stripe?
+
+O **Stripe** é uma plataforma global de pagamentos que oferece soluções para recebimentos online e recorrentes,
+checkout, links de pagamento, gestão de assinaturas e conciliação financeira.
+
+## Benefícios da integração NFe.io + Stripe
+
+- **Emissão automática de NFS-e:** Gere notas de serviço assim que o pagamento/assinatura for aprovado(a).
+- **Menos erros operacionais:** Evite digitação duplicada e inconsistências entre sistemas.
+- **Agilidade e conformidade:** Acelere o faturamento mantendo as regras fiscais atualizadas.
+- **Visão integrada:** Centralize dados de cobranças e notas emitidas.
+
+## Como funciona a integração?
+
+1. **Evento no Stripe:** Quando um pagamento é aprovado, reembolsado, recusado, ou quando a assinatura é criada/ativada/cancelada,
+   a Pluga envia os dados para o NFe.io.
+2. **Emissão da NFS-e:** O NFe.io utiliza as informações do cliente e da cobrança para emitir a **NFS-e**.
+3. **Acompanhamento:** O status da automação é visível na Pluga, e a situação da nota pode ser consultada no NFe.io.
+
+Gatilhos comuns no Stripe:
+
+- Pagamento aprovado
+- Pagamento recusado
+- Pagamento reembolsado
+- Assinatura criada
+- Assinatura ativa
+- Assinatura cancelada
+
+Ações no NFe.io:
+
+- Emitir **NFS-e**
+
+## Como configurar?
+
+Para configurar a integração entre NFe.io e Stripe via Pluga, siga os passos:
+
+1. Acesse sua conta na [Pluga][1] e vá até a integração **Stripe + NFe.io**.
+2. Conecte sua conta do **Stripe** e autorize o acesso quando solicitado.
+3. Conecte sua conta do **NFe.io** informando a chave de API quando solicitado.
+4. Selecione o gatilho no Stripe (ex.: pagamento aprovado) e a ação no NFe.io (emitir **NFS-e**).
+5. Mapeie os campos obrigatórios da NFS-e: tomador, serviço, município, código de serviço/CNAE, alíquota de ISS,
+   regime tributário e demais regras fiscais da sua operação.
+6. Salve e ative a automação para começar a emitir **NFS-e** automaticamente.
+
+[1]: https://pluga.co/ferramentas/nfe-io/integracao/stripe/
+
