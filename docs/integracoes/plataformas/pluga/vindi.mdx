@@ -1,0 +1,66 @@
+---
+title: Integração NFe.io + Vindi Recorrência
+description: Integre o NFe.io com a Vindi via Pluga para emitir NFS-e automaticamente a partir de transações e assinaturas aprovadas.
+sidebar_position: 28
+sidebar_label: Vindi Recorrência
+hide_title: true
+layout_type: IntegrationLayout
+provider: Vindi Recorrência
+badge: Pluga
+heroTitle: Integração NFe.io + Vindi via Pluga
+heroDescription: Emita NFS-e automaticamente a partir de transações aprovadas na Vindi.
+ctaLabel: Ver no Pluga
+ctaUrl: https://pluga.co/ferramentas/nfe-io/integracao/vindi/
+heroImage: /img/integracoes/vindi-icon.svg
+image: /img/integracoes/vindi.svg
+tags:
+  - pluga
+  - vindi
+  - nfse
+---
+
+A integração entre **NFe.io** e **Vindi** via **Pluga** permite emitir automaticamente **NFS-e** com base em eventos de
+transações e cobranças recorrentes — reduzindo tarefas manuais e garantindo conformidade fiscal.
+
+## O que é a Vindi?
+
+A **Vindi** é uma plataforma de pagamentos e recorrência, com recursos para cobranças, assinaturas, cartões, boletos e
+conciliação financeira.
+
+## Benefícios da integração NFe.io + Vindi
+
+- **Emissão automática de NFS-e:** Gere notas de serviço assim que a transação for criada/aprovada.
+- **Menos erros operacionais:** Evite digitação duplicada e inconsistências entre sistemas.
+- **Agilidade e conformidade:** Acelere o faturamento mantendo as regras fiscais atualizadas.
+- **Visão centralizada:** Acompanhe as automações na Pluga e as notas no NFe.io.
+
+## Como funciona a integração?
+
+1. **Evento na Vindi:** Quando uma transação dispara um gatilho (ex.: transação criada ou aprovada), a Pluga envia os
+   dados para o NFe.io.
+2. **Emissão da NFS-e:** O NFe.io utiliza as informações do cliente e da cobrança para emitir a **NFS-e**.
+3. **Acompanhamento:** O status da automação é visível na Pluga e a situação fiscal da nota pode ser consultada no NFe.io.
+
+Gatilhos comuns na Vindi:
+
+- Transação criada
+- Transação aprovada
+
+Ações no NFe.io:
+
+- Emitir **NFS-e**
+
+## Como configurar?
+
+Para configurar a integração entre NFe.io e Vindi via Pluga, siga os passos:
+
+1. Acesse sua conta na [Pluga][1] e vá até a integração **Vindi + NFe.io**.
+2. Conecte sua conta da **Vindi** e autorize o acesso quando solicitado.
+3. Conecte sua conta do **NFe.io** informando a chave de API quando solicitado.
+4. Selecione o gatilho na Vindi (ex.: transação aprovada) e a ação no NFe.io (emitir **NFS-e**).
+5. Mapeie os campos obrigatórios da NFS-e: tomador, serviço, município, código de serviço/CNAE, alíquota de ISS,
+   regime tributário e demais regras fiscais da sua operação.
+6. Salve e ative a automação para começar a emitir **NFS-e** automaticamente.
+
+[1]: https://pluga.co/ferramentas/nfe-io/integracao/vindi/
+

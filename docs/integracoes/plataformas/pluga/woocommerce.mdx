@@ -1,0 +1,65 @@
+---
+title: Integração NFe.io + WooCommerce
+description: Integre o NFe.io com o WooCommerce via Pluga para emitir NF-e automaticamente a partir de pedidos e pagamentos aprovados.
+sidebar_position: 16
+sidebar_label: WooCommerce
+hide_title: true
+layout_type: IntegrationLayout
+provider: WooCommerce
+badge: Pluga
+heroTitle: Integração NFe.io + WooCommerce via Pluga
+heroDescription: Automatize a emissão de NF-e a partir de pedidos e pagamentos do WooCommerce.
+ctaLabel: Ver no Pluga
+ctaUrl: https://pluga.co/ferramentas/nfe-io/integracao/woocommerce/
+heroImage: https://assets.pluga.co/apps/icons/woocommerce/woocommerce-icon.svg
+image: /img/integracoes/woocommerce.svg
+tags:
+  - pluga
+  - woocommerce
+  - nfe
+---
+
+A integração entre **NFe.io** e **WooCommerce** via **Pluga** permite emitir automaticamente **NF-e** com base em
+pedidos e eventos de pagamento da sua loja, reduzindo tarefas manuais e acelerando seu faturamento.
+
+## O que é o WooCommerce?
+
+O **WooCommerce** é um plugin de e-commerce para WordPress que transforma seu site em uma loja virtual completa,
+com recursos para catálogo de produtos, carrinho, checkout, meios de pagamento, frete e extensões.
+
+## Benefícios da integração NFe.io + WooCommerce
+
+- **Emissão automática de NF-e:** Gere notas fiscais a partir de pedidos criados ou pagamentos aprovados.
+- **Menos erros operacionais:** Evite digitação duplicada e inconsistências entre loja e sistema fiscal.
+- **Agilidade e conformidade:** Acelere o faturamento mantendo as regras fiscais atualizadas.
+- **Visão integrada:** Centralize os dados de pedidos e notas emitidas.
+
+## Como funciona a integração?
+
+1. **Evento no WooCommerce:** Quando um pedido é criado/atualizado (conforme o gatilho configurado), a Pluga envia os
+   dados para o NFe.io.
+2. **Emissão da NF-e:** O NFe.io utiliza as informações do pedido/cliente para emitir a **NF-e** correspondente.
+3. **Acompanhamento:** O status da automação é visível na Pluga, e a situação da nota pode ser consultada no NFe.io.
+
+Gatilhos comuns no WooCommerce:
+
+- Pedido criado
+- Pedido pago (pagamento aprovado)
+- Pedido cancelado
+
+Ações no NFe.io:
+
+- Emitir **NF-e**
+
+## Como configurar?
+
+Para configurar a integração entre NFe.io e WooCommerce via Pluga, siga os passos:
+
+1. Acesse sua conta na [Pluga][1] e vá até a integração **WooCommerce + NFe.io**.
+2. Conecte suas contas (autorize o WooCommerce e informe a chave de API do NFe.io quando solicitado).
+3. Selecione o gatilho no WooCommerce (ex.: pedido pago) e a ação no NFe.io (ex.: emitir **NF-e**).
+4. Mapeie os campos obrigatórios da NF-e: destinatário, itens, CFOP, NCM, CST/CSOSN, alíquotas e demais tributos.
+5. Salve e ative a automação para começar a emitir NF-e automaticamente.
+
+[1]: https://pluga.co/ferramentas/nfe-io/integracao/woocommerce/
+

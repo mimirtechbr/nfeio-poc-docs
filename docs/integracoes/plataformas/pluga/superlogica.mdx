@@ -1,0 +1,69 @@
+---
+title: Integração NFe.io + Superlógica Assinaturas
+description: Integre o NFe.io com a Superlógica Assinaturas via Pluga para emitir NFS-e automaticamente a partir de cobranças e assinaturas.
+sidebar_position: 26
+sidebar_label: Superlógica Assinaturas
+hide_title: true
+layout_type: IntegrationLayout
+provider: Superlógica Assinaturas
+badge: Pluga
+heroTitle: Integração NFe.io + Superlógica Assinaturas via Pluga
+heroDescription: Emita NFS-e automaticamente a partir de cobranças e assinaturas na Superlógica.
+ctaLabel: Ver no Pluga
+ctaUrl: https://pluga.co/ferramentas/nfe-io/integracao/superlogica/
+heroImage: /img/integracoes/superlogica-icon.svg
+image: /img/integracoes/superlogica.svg
+tags:
+  - pluga
+  - superlogica
+  - nfse
+---
+
+A integração entre **NFe.io** e **Superlógica Assinaturas** via **Pluga** permite emitir automaticamente **NFS-e** com base
+em eventos de cobranças e assinaturas — reduzindo tarefas manuais e garantindo conformidade fiscal.
+
+## O que é a Superlógica Assinaturas?
+
+A **Superlógica Assinaturas** é uma plataforma de gestão de recorrência, com recursos para planos, faturas, cobranças,
+boletos, cartões, inadimplência e toda a operação de assinaturas.
+
+## Benefícios da integração NFe.io + Superlógica
+
+- **Emissão automática de NFS-e:** Gere notas de serviço assim que uma cobrança for liquidada ou uma assinatura criada.
+- **Menos erros operacionais:** Evite retrabalho e inconsistências ao sincronizar dados entre as plataformas.
+- **Agilidade e conformidade:** Acelere o faturamento mantendo as regras fiscais atualizadas.
+- **Visão centralizada:** Acompanhe as automações na Pluga e as notas no NFe.io.
+
+## Como funciona a integração?
+
+1. **Evento na Superlógica:** Quando uma cobrança/assinatura dispara um gatilho (ex.: cobrança liquidada, assinatura criada),
+   a Pluga envia os dados para o NFe.io.
+2. **Emissão da NFS-e:** O NFe.io utiliza as informações do tomador e da cobrança para emitir a **NFS-e**.
+3. **Acompanhamento:** O status da automação é visível na Pluga e a situação fiscal da nota pode ser consultada no NFe.io.
+
+Gatilhos comuns na Superlógica:
+
+- Assinatura criada
+- Cobrança liquidada
+- Cobrança pendente
+- Cobrança estornada
+- Cobrança invalidada/cancelada
+
+Ações no NFe.io:
+
+- Emitir **NFS-e**
+
+## Como configurar?
+
+Para configurar a integração entre NFe.io e Superlógica Assinaturas via Pluga, siga os passos:
+
+1. Acesse sua conta na [Pluga][1] e vá até a integração **Superlógica + NFe.io**.
+2. Conecte sua conta da **Superlógica Assinaturas** e autorize o acesso.
+3. Conecte sua conta do **NFe.io** informando a chave de API quando solicitado.
+4. Selecione o gatilho na Superlógica (ex.: cobrança liquidada) e a ação no NFe.io (emitir **NFS-e**).
+5. Mapeie os campos obrigatórios da NFS-e: tomador, serviço, município, código de serviço/CNAE, alíquota de ISS,
+   regime tributário e demais regras fiscais necessárias.
+6. Salve e ative a automação para começar a emitir **NFS-e** automaticamente.
+
+[1]: https://pluga.co/ferramentas/nfe-io/integracao/superlogica/
+
