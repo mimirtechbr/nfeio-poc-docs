@@ -12,7 +12,7 @@ Portal de documentação da NFe.io construído com Docusaurus 3, tema e plugins 
 - Estilos: Tailwind CSS 4 + CSS customizado
 - i18n: pt-BR (padrão) e en habilitados
 
-URL de referência (Poc): https://nfeiodocspoc-docusaurus-rwqd4c.ctb-1-eu-east-1.cloudainer.com
+URL de referência (Poc): https://nfe-docs-poc.cloudainer.com/
 
 ## Requisitos
 
