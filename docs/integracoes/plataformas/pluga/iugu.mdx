@@ -1,0 +1,68 @@
+---
+title: Integração NFe.io + Iugu
+description: Integre o NFe.io com a Iugu via Pluga para emitir NFS-e automaticamente a partir de faturas e assinaturas aprovadas.
+sidebar_position: 16
+sidebar_label: Iugu
+hide_title: true
+layout_type: IntegrationLayout
+provider: Iugu
+badge: Pluga
+heroTitle: Integração NFe.io + Iugu via Pluga
+heroDescription: Emita NFS-e automaticamente a partir de faturas e assinaturas na iugu.
+ctaLabel: Ver no Pluga
+ctaUrl: https://pluga.co/ferramentas/nfe-io/integracao/iugu/
+heroImage: /img/integracoes/iugu-icon.svg
+image: /img/integracoes/iugu.svg
+tags:
+  - pluga
+  - iugu
+  - nfse
+---
+
+A integração entre **NFe.io** e **Iugu** permite emitir automaticamente **NFS-e** com base em eventos de cobrança e
+assinaturas, reduzindo tarefas manuais e mantendo a conformidade fiscal do seu negócio.
+
+## O que é a iugu?
+
+A **Iugu** é uma plataforma de pagamentos focada em cobranças, faturas e assinaturas, com soluções para automação
+financeira, conciliação e recebimentos recorrentes.
+
+## Benefícios da integração NFe.io + Iugu
+
+- **Emissão automática de NFS-e:** Gere notas de serviço sem intervenção manual após a aprovação de faturas/assinaturas.
+- **Menos erros operacionais:** Evite digitação duplicada e inconsistências entre sistemas.
+- **Agilidade e conformidade:** Acelere o faturamento mantendo as regras fiscais sempre atualizadas.
+- **Visão integrada:** Centralize os dados de cobranças e notas emitidas.
+
+## Como funciona a integração?
+
+1. **Evento na iugu:** Quando uma fatura/assinatura dispara um gatilho (ex.: fatura paga), a Pluga envia os dados
+   para o NFe.io.
+2. **Emissão da NFS-e:** O NFe.io utiliza as informações do cliente e da cobrança para emitir a **NFS-e**.
+3. **Acompanhamento:** O status da automação é visível na Pluga, e a situação da nota pode ser consultada no NFe.io.
+
+Gatilhos comuns na iugu:
+
+- Fatura paga
+- Fatura cancelada
+- Fatura expirada
+- Assinatura paga
+- Assinatura cancelada
+
+Ações no NFe.io:
+
+- Emitir **NFS-e**
+
+## Como configurar?
+
+Para configurar a integração entre NFe.io e iugu via Pluga, siga os passos:
+
+1. Acesse sua conta na [Pluga][1] e vá até a integração **iugu + NFe.io**.
+2. Conecte suas contas (autorize a iugu e informe a chave de API do NFe.io quando solicitado).
+3. Selecione o gatilho na iugu (ex.: fatura paga) e a ação no NFe.io (ex.: emitir **NFS-e**).
+4. Mapeie os campos obrigatórios da NFS-e: tomador, serviço, município, CNAE/código de serviço, alíquota de ISS, regime
+   tributário e outras regras fiscais necessárias.
+5. Salve e ative a automação para começar a emitir NFS-e automaticamente.
+
+[1]: https://pluga.co/ferramentas/nfe-io/integracao/iugu/
+

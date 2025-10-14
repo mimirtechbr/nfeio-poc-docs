@@ -1,0 +1,67 @@
+---
+title: Integração NFe.io + Kobana (Boleto Simples)
+description: Integre o NFe.io com a Kobana (Boleto Simples) via Pluga para emitir NFS-e automaticamente a partir de boletos e assinaturas.
+sidebar_position: 17
+sidebar_label: Kobana (Boleto Simples)
+hide_title: true
+layout_type: IntegrationLayout
+provider: Kobana (Boleto Simples)
+badge: Pluga
+heroTitle: Integração NFe.io + Kobana via Pluga
+heroDescription: Emita NFS-e automaticamente a partir de boletos e assinaturas na Kobana.
+ctaLabel: Ver no Pluga
+ctaUrl: https://pluga.co/ferramentas/nfe-io/integracao/boleto-simples/
+heroImage: /img/integracoes/boleto_simples-icon.svg
+image: /img/integracoes/kobana.svg
+tags:
+  - pluga
+  - kobana
+  - boleto-simples
+  - nfse
+---
+
+A integração entre **NFe.io** e **Kobana (Boleto Simples)** permite emitir automaticamente **NFS-e** com base em
+cobranças por boleto e assinaturas, reduzindo tarefas manuais e mantendo a conformidade fiscal.
+
+## O que é a Kobana (Boleto Simples)?
+
+A **Kobana** (antigo **Boleto Simples**) oferece soluções de emissão de boletos, gestão de assinaturas e automação de
+cobranças, facilitando a operação financeira de empresas.
+
+## Benefícios da integração NFe.io + Kobana
+
+- **Emissão automática de NFS-e:** Gere notas de serviço após a confirmação de pagamento do boleto/assinatura.
+- **Menos erros operacionais:** Evite digitação duplicada e inconsistências entre plataformas.
+- **Agilidade e conformidade:** Acelere o faturamento mantendo as regras fiscais atualizadas.
+- **Visão integrada:** Centralize os dados de cobranças e notas emitidas.
+
+## Como funciona a integração?
+
+1. **Evento na Kobana:** Quando um pagamento ou evento de assinatura dispara um gatilho (ex.: boleto pago), a Pluga
+   envia os dados para o NFe.io.
+2. **Emissão da NFS-e:** O NFe.io utiliza as informações do cliente e da cobrança para emitir a **NFS-e**.
+3. **Acompanhamento:** O status da automação é visível na Pluga, e a situação da nota pode ser consultada no NFe.io.
+
+Gatilhos comuns na Kobana:
+
+- Boleto pago
+- Assinatura paga
+- Boleto cancelado/expirado
+
+Ações no NFe.io:
+
+- Emitir **NFS-e**
+
+## Como configurar?
+
+Para configurar a integração entre NFe.io e Kobana via Pluga, siga os passos:
+
+1. Acesse sua conta na [Pluga][1] e vá até a integração **Boleto Simples (Kobana) + NFe.io**.
+2. Conecte suas contas (autorize a Kobana e informe a chave de API do NFe.io quando solicitado).
+3. Selecione o gatilho na Kobana (ex.: boleto pago) e a ação no NFe.io (ex.: emitir **NFS-e**).
+4. Mapeie os campos obrigatórios da NFS-e: tomador, serviço, município, código de serviço/CNAE, alíquota de ISS,
+   regime tributário e outras regras fiscais necessárias.
+5. Salve e ative a automação para começar a emitir NFS-e automaticamente.
+
+[1]: https://pluga.co/ferramentas/nfe-io/integracao/boleto-simples/
+
