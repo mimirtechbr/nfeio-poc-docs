@@ -146,7 +146,7 @@ export default function IntegrationsIndex() {
                 return (
                   <li key={doc.id} className="group list-none">
                     <Link
-                      to={doc.permalink}
+                      to={doc.id}
                       className="block h-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900/60 p-4 hover:border-primary-500 hover:shadow-sm transition-colors"
                     >
                       <div className="flex items-start justify-between gap-2 mb-2">
