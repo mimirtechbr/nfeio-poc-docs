@@ -63,7 +63,7 @@
       "provider": "Asaas",
       "title": "Integração NFe.io + Asaas",
       "description": "Saiba como integrar NFe.io com Asaas via Pluga para automatizar a emissão de notas fiscais eletrônicas a partir das cobranças.",
-      "icon": "",
+      "icon": "/img/integracoes/asaas-icon.svg",
       "link": "/integracoes/plataformas/pluga/asaas"
     },
     {
@@ -71,7 +71,7 @@
       "provider": "Bling",
       "title": "Integração NFe.io + Bling",
       "description": "Saiba como integrar NFe.io com Bling via Pluga para automatizar a emissão de notas fiscais eletrônicas a partir de pedidos e vendas.",
-      "icon": "",
+      "icon": "/img/integracoes/bling-icon.svg",
       "link": "/integracoes/plataformas/pluga/bling"
     },
     {
@@ -79,7 +79,7 @@
       "provider": "Eduzz",
       "title": "Integração NFe.io + Eduzz",
       "description": "Saiba como integrar NFe.io com Eduzz via Pluga para automatizar a emissão de notas fiscais de serviço (NFS-e) a partir das vendas aprovadas.",
-      "icon": "",
+      "icon": "/img/integracoes/eduzz-icon.svg",
       "link": "/integracoes/plataformas/pluga/eduzz"
     },
     {
@@ -87,7 +87,7 @@
       "provider": "Excel",
       "title": "Integração NFe.io + Excel",
       "description": "Integre o NFe.io com Excel via Pluga para emitir NF-e ou NFS-e automaticamente a partir de linhas da sua planilha.",
-      "icon": "",
+      "icon": "/img/integracoes/excel-icon.svg",
       "link": "/integracoes/plataformas/pluga/excel"
     },
     {
@@ -95,7 +95,7 @@
       "provider": "Google Forms",
       "title": "Integração NFe.io + Google Forms",
       "description": "Integre o NFe.io com o Google Forms via Pluga para emitir NF-e ou NFS-e automaticamente a partir de respostas do formulário.",
-      "icon": "",
+      "icon": "/img/integracoes/google-forms-icon.svg",
       "link": "/integracoes/plataformas/pluga/google-forms"
     },
     {
@@ -247,17 +247,17 @@
     {
       "name": "WHMCS",
       "provider": "WHMCS",
-      "title": "Automatize a emissão de notas fiscais de serviço NFS-e com WHMCS e NFE.io",
-      "description": "A NFE.io é um sistema de emissão de notas fiscais que automatiza a comunicação com as prefeituras.",
+      "title": "Plugin WHMCS NFE.io",
+      "description": "O plugin NFE.io para WHMCS permite a emissão automática de notas fiscais eletrônicas (NF-e) para suas vendas realizadas na plataforma WHMCS.",
       "icon": "",
       "link": "/integracoes/plugins/whmcs"
     },
     {
       "name": "WooCommerce",
       "provider": "WooCommerce",
-      "title": "Como integrar o Woocommerce com NFE.io?",
-      "description": "O WooCommerce é uma plataforma de e-commerce completa para o WordPress.",
-      "icon": "",
+      "title": "Plugin Woocommerce NFE.io",
+      "description": "O plugin NFE.io para WooCommerce permite a emissão automática de notas fiscais eletrônicas (NF-e) para suas vendas realizadas na plataforma WooCommerce.",
+      "icon": "/img/integracoes/woocommerce-icon.svg",
       "link": "/integracoes/plugins/woocommerce"
     }
   ]
