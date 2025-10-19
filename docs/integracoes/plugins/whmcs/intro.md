@@ -1,12 +1,27 @@
 ---
 title: Automatize a emissão de notas fiscais de serviço NFS-e com WHMCS e NFE.io
 sidebar_label: Introdução
+hide_title: true
 slug: /integracoes/plugins/whmcs
 sidebar_position: 1
+layout_type: IntegrationLayout
+provider: WHMCS
+badge: Plugin
+heroTitle: Automatize a emissão de notas fiscais de serviço NFS-e com WHMCS e NFE.io
+heroDescription: A NFE.io é um sistema de emissão de notas fiscais que automatiza a comunicação com as prefeituras. Com a NFE.io você se livra de diversas tarefas chatas, melhorando o desempenho do seu negócio. E melhor, você economiza tempo e dinheiro.
+ctaLabel: Acessar WHMCS
+ctaUrl: https://www.whmcs.com/
+heroImage: /img/integracoes/whmcs-icon.svg
+image: /img/integracoes/whmcs.svg
+tags:
+  - whmcs
+  - nfe
+  - integracao
+  - plugin
 ---
 # WHMCS
 
-## Automatize a emissão de notas fiscais de serviço NFS-e com WHMCS e NFE.io!
+> Automatize a emissão de notas fiscais de serviço NFS-e com WHMCS e NFE.io!
 
 A NFE.io é um sistema de emissão de notas fiscais que automatiza a comunicação com as prefeituras. Com a NFE.io você se livra de diversas tarefas chatas, melhorando o desempenho do seu negócio. E melhor, você economiza tempo e dinheiro.
 
