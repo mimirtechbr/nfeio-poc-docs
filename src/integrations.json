@@ -5,7 +5,7 @@
       "provider": "GestãoDS",
       "title": "O que é a GestãoDS e como integrar com a NFE.io?",
       "description": "Saiba o que é a GestãoDS, quem pode usar a plataforma e como integrar com a NFE.io para emissão automática de notas fiscais.",
-      "icon": "",
+      "icon": "/img/integracoes/gestaods-icon.svg",
       "link": "/integracoes/plataformas/gestaods"
     },
     {
@@ -13,7 +13,7 @@
       "provider": "Hubspot",
       "title": "Como integrar nossa API de Consulta de CNPJ com o CRM Hubspot via Zapier",
       "description": "Aprenda a integrar nossa API de Consulta de dados dos CNPJ's com o CRM Hubspot via Zapier.",
-      "icon": "",
+      "icon": "/img/integracoes/hubspot-icon.svg",
       "link": "/integracoes/plataformas/integracoes-plataformas-como-integrar-nossa-api-de-consulta-de-dados-com-o-crm-hubspot-via-zapier"
     },
     {
@@ -21,23 +21,15 @@
       "provider": "Iugu",
       "title": "O que é a iugu e como integrar com a NFE.io?",
       "description": "Saiba o que é a iugu, quem pode usar a plataforma e como integrar com a NFE.io para emissão automática de notas fiscais.",
-      "icon": "",
+      "icon": "/img/integracoes/iugu-icon.svg",
       "link": "/integracoes/plataformas/iugu"
-    },
-    {
-      "name": "Mundipagg",
-      "provider": "Mundipagg",
-      "title": "Como Integrar Emissão de NFE na Mundipagg com NFe.io",
-      "description": "Saiba como integrar a emissão de NFS-e na Mundipagg com o NFe.io",
-      "icon": "",
-      "link": "/integracoes/plataformas/mundipagg"
     },
     {
       "name": "Pagar.me",
       "provider": "Pagar.me",
       "title": "O que é o Pagar.me e como integrar com a NFE.io?",
       "description": "Saiba o que é o Pagar.me, quais meios de pagamento ele aceita e como integrar com a NFE.io para emissão automática de notas fiscais.",
-      "icon": "",
+      "icon": "/img/integracoes/pagar-me-icon.svg",
       "link": "/integracoes/plataformas/pagar-me"
     },
     {
@@ -45,7 +37,7 @@
       "provider": "Vindi",
       "title": "O que é a Vindi e como integrar com a NFE.io?",
       "description": "A Vindi é uma plataforma SaaS para gestão de pagamentos recorrentes, que possibilita que empresas de pequeno, médio e grande porte, possam automatizar todo o processo de cobranças.",
-      "icon": "",
+      "icon": "/img/integracoes/vindi-icon.svg",
       "link": "/integracoes/plataformas/vindi"
     },
     {
@@ -241,13 +233,13 @@
       "provider": "Microsoft Flow",
       "title": "Microsoft Flow",
       "description": "Entenda o que é Microsoft Flow, como usar junto ao Google Planilhas e integrá-lo à plataforma da NFE.io.",
-      "icon": "",
+      "icon": "/img/integracoes/microsoft-flow-icon.svg",
       "link": "/integracoes/plugins/microsoft-flow"
     },
     {
       "name": "WHMCS",
       "provider": "WHMCS",
-      "title": "Plugin WHMCS NFE.io",
+      "title": "Módulo WHMCS NFE.io",
       "description": "O plugin NFE.io para WHMCS permite a emissão automática de notas fiscais eletrônicas (NF-e) para suas vendas realizadas na plataforma WHMCS.",
       "icon": "/img/integracoes/whmcs-icon.svg",
       "link": "/integracoes/plugins/whmcs"
