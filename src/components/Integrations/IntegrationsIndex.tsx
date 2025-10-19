@@ -119,18 +119,28 @@ export default function IntegrationsIndex() {
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {group.items.map((item, di) => {
                 const color = badgeColors[(gi + di) % badgeColors.length];
+                const iconSrc = item.icon || '/static/img/img-integracoes.jpg';
+
                 return (
                   <li key={item.link} className="group list-none">
                     <Link
                       to={item.link}
                       className="block h-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900/60 p-4 hover:border-primary-500 hover:shadow-sm transition-colors"
                     >
-                      <div className="flex items-start justify-between gap-2 mb-2">
-                        <span className={`text-[10px] font-semibold uppercase tracking-wide rounded px-1.5 py-0.5 ${color}`}>
+                      <div className="flex items-start justify-between gap-3 mb-3">
+                        <div className="flex-shrink-0">
+                          <img
+                            src={iconSrc}
+                            alt={`${item.title} icon`}
+                            className="w-10 h-10 rounded-md object-cover bg-gray-100 dark:bg-gray-800"
+
+                          />
+                        </div>
+                        <span className={`text-[10px] font-semibold uppercase tracking-wide rounded px-1.5 py-0.5 flex-shrink-0 ${color}`}>
                           {group.label}
                         </span>
                       </div>
-                      <h3 className="text-sm font-semibold mb-1 group-hover:text-primary-600 dark:group-hover:text-primary-400 line-clamp-2">
+                      <h3 className="text-sm font-semibold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 line-clamp-2">
                         {item.title}
                       </h3>
                       {item.description && (
