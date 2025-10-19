@@ -249,7 +249,7 @@
       "provider": "WHMCS",
       "title": "Plugin WHMCS NFE.io",
       "description": "O plugin NFE.io para WHMCS permite a emissão automática de notas fiscais eletrônicas (NF-e) para suas vendas realizadas na plataforma WHMCS.",
-      "icon": "",
+      "icon": "/img/integracoes/whmcs-icon.svg",
       "link": "/integracoes/plugins/whmcs"
     },
     {
