@@ -1,8 +1,7 @@
 // @ts-nocheck
 import React, {useMemo, useState} from 'react';
 import Link from '@docusaurus/Link';
-// @ts-ignore
-import {useAllDocsData, useDocById} from '@docusaurus/plugin-content-docs/client';
+import integrationsData from '../../integrations.json';
 
 // Utility to normalize string for search (case + accents + trim)
 function normalize(str: string): string {
@@ -15,42 +14,35 @@ function normalize(str: string): string {
     .trim();
 }
 
-interface DocMeta {
-  id: string;
+interface IntegrationItem {
+  name: string;
+  provider: string;
   title: string;
-  description?: string;
-  permalink: string;
-  frontMatter?: Record<string, any>;
+  description: string;
+  icon: string;
+  link: string;
 }
 
 interface GroupedDocs {
   label: string;
-  items: DocMeta[];
+  items: IntegrationItem[];
 }
 
-const INCLUDE_ID_PREFIXES = [
-  'integracoes/plataformas/',
-  'integracoes/plataformas/pluga/',
-  'integracoes/plugins/',
-];
+// Build groups from JSON data
+function buildGroupsFromJSON(): GroupedDocs[] {
+  const groups: GroupedDocs[] = [
+      { label: 'Plugins', items: integrationsData.plugins },
+      { label: 'Plataformas', items: integrationsData.plataformas },
+      { label: 'Pluga', items: integrationsData.pluga }
+  ];
 
-function isIntegrationId(id: string): boolean {
-  return INCLUDE_ID_PREFIXES.some(p => id.startsWith(p));
-}
+  // Sort items within each group by title
+  const byTitle = (a: IntegrationItem, b: IntegrationItem) =>
+    a.title.localeCompare(b.title, 'pt-BR', {sensitivity: 'base'});
 
-function categorize(doc: DocMeta): string {
-  if (doc.id.startsWith('integracoes/plataformas/pluga/')) return 'Pluga';
-  if (doc.id.startsWith('integracoes/plugins/')) return 'Plugins';
-  return 'Plataformas';
-}
+  groups.forEach(group => group.items.sort(byTitle));
 
-// Build groups from doc metas
-function buildGroupsFromDocs(docs: DocMeta[]): GroupedDocs[] {
-  const map: Record<string, DocMeta[]> = { Plataformas: [], Pluga: [], Plugins: [] };
-  docs.forEach(d => { map[categorize(d)].push(d); });
-  const byTitle = (a: DocMeta, b: DocMeta) => (a.frontMatter?.sidebar_label || a.title || '').localeCompare((b.frontMatter?.sidebar_label || b.title || ''), 'pt-BR', {sensitivity: 'base'});
-  Object.values(map).forEach(arr => arr.sort(byTitle));
-  return ['Plataformas','Pluga','Plugins'].map(label => ({label, items: map[label]})).filter(g => g.items.length>0);
+  return groups.filter(g => g.items.length > 0);
 }
 
 const badgeColors = [
@@ -62,23 +54,8 @@ const badgeColors = [
 ];
 
 export default function IntegrationsIndex() {
-  const allDocsData = useAllDocsData();
-  const plugin = allDocsData['default'];
-  const version = plugin?.versions?.[0];
-  const allIds: string[] = (version?.docs ?? []).map(d => d.id);
+  const groups = useMemo(() => buildGroupsFromJSON(), []);
 
-  const integrationIds = useMemo(() => allIds
-    .filter(id => isIntegrationId(id))
-    // excluir intros
-    .filter(id => id !== 'integracoes/integracoes-intro')
-    .filter(id => !/\/intro$/.test(id))
-  , [allIds]);
-
-  // Obter metadados com hook por id (ordem estável)
-  const integrationDocs: DocMeta[] = integrationIds.map(id => useDocById(id)).filter(Boolean) as any;
-
-  const groups = useMemo(() => buildGroupsFromDocs(integrationDocs), [integrationDocs]);
-    console.log(groups);
   const [query, setQuery] = useState('');
   const normalizedQuery = normalize(query);
 
@@ -86,16 +63,16 @@ export default function IntegrationsIndex() {
     if (!normalizedQuery) return groups;
     return groups.map(g => ({
       ...g,
-      items: g.items.filter(i => [i.frontMatter?.sidebar_label, i.title, i.description, i.id]
+      items: g.items.filter(i => [i.name, i.title, i.description, i.provider]
         .filter(Boolean)
         .map(s => normalize(String(s)))
         .some(val => val.includes(normalizedQuery))
       )
-    })).filter(g => g.items.length>0);
+    })).filter(g => g.items.length > 0);
   }, [groups, normalizedQuery]);
 
-  const total = groups.reduce((a,g)=>a+g.items.length,0);
-  const totalFiltered = filteredGroups.reduce((a,g)=>a+g.items.length,0);
+  const total = groups.reduce((a, g) => a + g.items.length, 0);
+  const totalFiltered = filteredGroups.reduce((a, g) => a + g.items.length, 0);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
@@ -140,13 +117,12 @@ export default function IntegrationsIndex() {
               </span>
             </h2>
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {group.items.map((doc, di) => {
+              {group.items.map((item, di) => {
                 const color = badgeColors[(gi + di) % badgeColors.length];
-                  console.log(doc);
                 return (
-                  <li key={doc.id} className="group list-none">
+                  <li key={item.link} className="group list-none">
                     <Link
-                      to={doc.id}
+                      to={item.link}
                       className="block h-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900/60 p-4 hover:border-primary-500 hover:shadow-sm transition-colors"
                     >
                       <div className="flex items-start justify-between gap-2 mb-2">
@@ -155,11 +131,11 @@ export default function IntegrationsIndex() {
                         </span>
                       </div>
                       <h3 className="text-sm font-semibold mb-1 group-hover:text-primary-600 dark:group-hover:text-primary-400 line-clamp-2">
-                        {doc.frontMatter?.sidebar_label || doc.title}
+                        {item.title}
                       </h3>
-                      {doc.description && (
+                      {item.description && (
                         <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-3">
-                          {doc.description}
+                          {item.description}
                         </p>
                       )}
                     </Link>
