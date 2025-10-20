@@ -45,7 +45,7 @@
       "provider": "Wirecard",
       "title": "O que é a Wirecard e como integrar com a NFE.io?",
       "description": "Saiba o que é a Wirecard, quem pode usar a plataforma e como integrar com a NFE.io para emissão automática de notas fiscais.",
-      "icon": "",
+      "icon": "/img/integracoes/wirecard-icon.svg",
       "link": "/integracoes/plataformas/wirecard"
     }
   ],
