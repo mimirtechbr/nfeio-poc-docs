@@ -1,0 +1,74 @@
+---
+title: Integrações NFe.io + Pluga
+description: Saiba como conectar o NFe.io à Pluga para automatizar a emissão de NF-e e NFS-e sem escrever código.
+sidebar_position: 1
+sidebar_label: "Introdução: NFe.io + Pluga"
+hide_title: true
+layout_type: IntegrationLayout
+badge: Pluga
+heroTitle: NFe.io + Pluga
+heroDescription: Conecte o NFe.io a diversas ferramentas via Pluga e automatize a emissão de NF-e/NFS-e sem código.
+ctaLabel: Ver integrações
+ctaUrl: https://pluga.co/ferramentas/nfe-io/integracao/
+heroImage: /img/integracoes/pluga-icon.svg
+image: /img/integracoes/pluga.svg
+tags:
+  - pluga
+  - integracoes
+---
+
+A Pluga é uma plataforma de automações que conecta aplicações — como ERPs, planilhas, gateways de pagamento e ferramentas de assinatura —
+sem a necessidade de desenvolvimento. Com a Pluga você monta fluxos ("automações") que reagenciam a eventos (gatilhos) em uma ferramenta
+para executar ações em outra.
+
+A integração entre o NFe.io e a Pluga permite automatizar a emissão de NF-e e NFS-e a partir de eventos vindos de centenas de apps
+— por exemplo: quando uma linha é adicionada no Google Sheets, quando um pedido é criado no Bling, quando um pagamento é confirmado no
+Stripe, ou quando um webhook personalizado chega ao Pluga.
+
+## Por que usar NFe.io + Pluga
+
+- Automação sem código: crie fluxos para emitir notas automaticamente sem desenvolver integrações.
+- Flexibilidade: conecte sistemas que não têm integração nativa com NFe.io por meio de conectores da Pluga (Google Sheets, Bling, Stripe, Superlógica, etc.).
+- Redução de erros operacionais: elimine digitação manual e garanta consistência entre vendas/cobranças e emissão fiscal.
+- Conformidade e segurança: a emissão continua sendo feita pelo NFe.io, mantendo regras fiscais, validações e armazenamento conforme necessário.
+
+## Principais gatilhos e ações
+
+Gatilhos típicos na Pluga (exemplos):
+- Nova linha adicionada (Google Sheets)
+- Novo pedido/vença no ERP (Bling)
+- Pagamento aprovado (Stripe)
+- Cobrança liquidada / assinatura criada (Superlógica)
+- Webhook recebido (Pluga Webhooks)
+
+Ações disponíveis no NFe.io (via Pluga):
+- Emitir NF-e (documento fiscal de produto)
+- Emitir NFS-e (nota de serviço)
+
+## Casos de uso comuns
+
+- Automatizar a emissão de NF-e a partir de pedidos do seu ERP.
+- Gerar NFS-e automaticamente quando um pagamento recorrente é conciliado.
+- Transformar linhas de uma planilha em notas fiscais para simplificar faturamento em volume.
+- Receber dados via webhooks de sistemas próprios e emitir notas sem criar integrações customizadas.
+
+## Como configurar (resumo rápido)
+
+1. Acesse seu painel na Pluga e escolha uma integração que envolva NFe.io (ex.: Google Sheets + NFe.io, Bling + NFe.io).
+2. Conecte as contas necessárias (autorize Google/Stripe/Bling/Superlógica quando solicitado e informe a chave de API do NFe.io).
+3. Configure o gatilho (quando a automação deve rodar) e a ação no NFe.io (emitir NF-e ou NFS-e).
+4. Mapeie os campos obrigatórios (destinatário, itens, tributos para NF-e; tomador, serviço e município para NFS-e) de acordo com sua operação fiscal.
+5. Salve, ative e faça testes com eventos reais ou simulações para validar os mapeamentos.
+
+### Boas práticas
+
+- Sempre teste com dados de homologação antes de ativar em produção.
+- Mapeie e valide todos os campos fiscais obrigatórios; a Pluga faz a entrega dos dados, mas o NFe.io executa as validações fiscais.
+- Documente os fluxos e mantenha os responsáveis informados sobre alterações que possam afetar o faturamento.
+
+## Dúvidas e suporte
+
+Se precisar de ajuda para configurar uma automação específica, consulte as páginas desta seção (ex.: Google Sheets, Bling, Stripe, Superlógica, Pluga Webhooks)
+ou entre em contato com o suporte da Pluga e do NFe.io.
+
+[Ver integrações no Pluga](https://pluga.co/ferramentas/nfe-io/integracao/)
