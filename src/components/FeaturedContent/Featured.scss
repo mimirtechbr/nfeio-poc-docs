@@ -35,10 +35,10 @@ html[data-theme="light"] {
 
   .featured-card__product-list-item {
     &.api-doc-icon::before {
-      content: url("/icons/api-docs-icon-dark.svg");
+      content: url("/docs/icons/api-docs-icon-dark.svg");
     }
     &.doc-icon::before {
-      content: url("/icons/docs-icon-dark.svg");
+      content: url("/docs/icons/docs-icon-dark.svg");
     }
   }
 }

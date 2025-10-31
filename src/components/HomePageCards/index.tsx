@@ -33,7 +33,7 @@ export default function HomePageCards() {
                     </div>
                 </div>
                 <img
-                    src="/img/docs-top.jpg"
+                    src="/docs/img/docs-top.jpg"
                     width={500}
                     height={500}
                     alt="Documentação NFe.io"
@@ -67,7 +67,7 @@ export default function HomePageCards() {
                     </div>
                 </div>
                 <img
-                    src="/img/img-desenvolvedores.jpg"
+                    src="/docs/img/img-desenvolvedores.jpg"
                     width={480}
                     height={500}
                     alt="Referências da API NFE.io"
@@ -101,7 +101,7 @@ export default function HomePageCards() {
                     </div>
                 </div>
                 <img
-                    src="/img/img-integracoes.jpg"
+                    src="/docs/img/img-integracoes.jpg"
                     width={480}
                     height={500}
                     alt="Integrações da NFE.io"

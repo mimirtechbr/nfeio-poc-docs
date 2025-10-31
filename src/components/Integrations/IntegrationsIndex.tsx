@@ -119,7 +119,7 @@ export default function IntegrationsIndex() {
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {group.items.map((item, di) => {
                 const color = badgeColors[(gi + di) % badgeColors.length];
-                const iconSrc = item.icon || '/static/img/img-integracoes.jpg';
+                const iconSrc = item.icon || '/docs/static/img/img-integracoes.jpg';
 
                 return (
                   <li key={item.link} className="group list-none">

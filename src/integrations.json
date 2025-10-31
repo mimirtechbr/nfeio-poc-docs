@@ -5,7 +5,7 @@
       "provider": "GestãoDS",
       "title": "O que é a GestãoDS e como integrar com a NFE.io?",
       "description": "Saiba o que é a GestãoDS, quem pode usar a plataforma e como integrar com a NFE.io para emissão automática de notas fiscais.",
-      "icon": "/img/integracoes/gestaods-icon.svg",
+      "icon": "/docs/img/integracoes/gestaods-icon.svg",
       "link": "/integracoes/plataformas/gestaods"
     },
     {
@@ -13,7 +13,7 @@
       "provider": "Hubspot",
       "title": "Como integrar nossa API de Consulta de CNPJ com o CRM Hubspot via Zapier",
       "description": "Aprenda a integrar nossa API de Consulta de dados dos CNPJ's com o CRM Hubspot via Zapier.",
-      "icon": "/img/integracoes/hubspot-icon.svg",
+      "icon": "/docs/img/integracoes/hubspot-icon.svg",
       "link": "/integracoes/plataformas/integracoes-plataformas-como-integrar-nossa-api-de-consulta-de-dados-com-o-crm-hubspot-via-zapier"
     },
     {
@@ -21,7 +21,7 @@
       "provider": "Iugu",
       "title": "O que é a iugu e como integrar com a NFE.io?",
       "description": "Saiba o que é a iugu, quem pode usar a plataforma e como integrar com a NFE.io para emissão automática de notas fiscais.",
-      "icon": "/img/integracoes/iugu-icon.svg",
+      "icon": "/docs/img/integracoes/iugu-icon.svg",
       "link": "/integracoes/plataformas/iugu"
     },
     {
@@ -29,7 +29,7 @@
       "provider": "Pagar.me",
       "title": "O que é o Pagar.me e como integrar com a NFE.io?",
       "description": "Saiba o que é o Pagar.me, quais meios de pagamento ele aceita e como integrar com a NFE.io para emissão automática de notas fiscais.",
-      "icon": "/img/integracoes/pagar-me-icon.svg",
+      "icon": "/docs/img/integracoes/pagar-me-icon.svg",
       "link": "/integracoes/plataformas/pagar-me"
     },
     {
@@ -37,7 +37,7 @@
       "provider": "Vindi",
       "title": "O que é a Vindi e como integrar com a NFE.io?",
       "description": "A Vindi é uma plataforma SaaS para gestão de pagamentos recorrentes, que possibilita que empresas de pequeno, médio e grande porte, possam automatizar todo o processo de cobranças.",
-      "icon": "/img/integracoes/vindi-icon.svg",
+      "icon": "/docs/img/integracoes/vindi-icon.svg",
       "link": "/integracoes/plataformas/vindi"
     },
     {
@@ -45,7 +45,7 @@
       "provider": "Wirecard",
       "title": "O que é a Wirecard e como integrar com a NFE.io?",
       "description": "Saiba o que é a Wirecard, quem pode usar a plataforma e como integrar com a NFE.io para emissão automática de notas fiscais.",
-      "icon": "/img/integracoes/wirecard-icon.svg",
+      "icon": "/docs/img/integracoes/wirecard-icon.svg",
       "link": "/integracoes/plataformas/wirecard"
     }
   ],
@@ -55,7 +55,7 @@
       "provider": "Asaas",
       "title": "Integração NFe.io + Asaas",
       "description": "Saiba como integrar NFe.io com Asaas via Pluga para automatizar a emissão de notas fiscais eletrônicas a partir das cobranças.",
-      "icon": "/img/integracoes/asaas-icon.svg",
+      "icon": "/docs/img/integracoes/asaas-icon.svg",
       "link": "/integracoes/plataformas/pluga/asaas"
     },
     {
@@ -63,7 +63,7 @@
       "provider": "Bling",
       "title": "Integração NFe.io + Bling",
       "description": "Saiba como integrar NFe.io com Bling via Pluga para automatizar a emissão de notas fiscais eletrônicas a partir de pedidos e vendas.",
-      "icon": "/img/integracoes/bling-icon.svg",
+      "icon": "/docs/img/integracoes/bling-icon.svg",
       "link": "/integracoes/plataformas/pluga/bling"
     },
     {
@@ -71,7 +71,7 @@
       "provider": "Eduzz",
       "title": "Integração NFe.io + Eduzz",
       "description": "Saiba como integrar NFe.io com Eduzz via Pluga para automatizar a emissão de notas fiscais de serviço (NFS-e) a partir das vendas aprovadas.",
-      "icon": "/img/integracoes/eduzz-icon.svg",
+      "icon": "/docs/img/integracoes/eduzz-icon.svg",
       "link": "/integracoes/plataformas/pluga/eduzz"
     },
     {
@@ -79,7 +79,7 @@
       "provider": "Excel",
       "title": "Integração NFe.io + Excel",
       "description": "Integre o NFe.io com Excel via Pluga para emitir NF-e ou NFS-e automaticamente a partir de linhas da sua planilha.",
-      "icon": "/img/integracoes/excel-icon.svg",
+      "icon": "/docs/img/integracoes/excel-icon.svg",
       "link": "/integracoes/plataformas/pluga/excel"
     },
     {
@@ -87,7 +87,7 @@
       "provider": "Google Forms",
       "title": "Integração NFe.io + Google Forms",
       "description": "Integre o NFe.io com o Google Forms via Pluga para emitir NF-e ou NFS-e automaticamente a partir de respostas do formulário.",
-      "icon": "/img/integracoes/google-forms-icon.svg",
+      "icon": "/docs/img/integracoes/google-forms-icon.svg",
       "link": "/integracoes/plataformas/pluga/google-forms"
     },
     {
@@ -95,7 +95,7 @@
       "provider": "Google Sheets",
       "title": "Integração NFe.io + Google Sheets",
       "description": "Integre o NFe.io com o Google Sheets via Pluga para emitir NF-e ou NFS-e automaticamente a partir de linhas da sua planilha.",
-      "icon": "/img/integracoes/google-sheets-icon.svg",
+      "icon": "/docs/img/integracoes/google-sheets-icon.svg",
       "link": "/integracoes/plataformas/pluga/google-sheets"
     },
     {
@@ -103,7 +103,7 @@
       "provider": "Hotmart",
       "title": "Integração NFe.io + Hotmart",
       "description": "Integre o NFe.io com a Hotmart via Pluga para emitir NFS-e automaticamente a partir de vendas e assinaturas aprovadas.",
-      "icon": "/img/integracoes/hotmart-icon.svg",
+      "icon": "/docs/img/integracoes/hotmart-icon.svg",
       "link": "/integracoes/plataformas/pluga/hotmart"
     },
     {
@@ -111,7 +111,7 @@
       "provider": "Iugu",
       "title": "Integração NFe.io + Iugu",
       "description": "Integre o NFe.io com a Iugu via Pluga para emitir NFS-e automaticamente a partir de faturas e assinaturas aprovadas.",
-      "icon": "/img/integracoes/iugu-icon.svg",
+      "icon": "/docs/img/integracoes/iugu-icon.svg",
       "link": "/integracoes/plataformas/pluga/iugu"
     },
     {
@@ -119,7 +119,7 @@
       "provider": "Kobana (Boleto Simples)",
       "title": "Integração NFe.io + Kobana (Boleto Simples)",
       "description": "Integre o NFe.io com a Kobana (Boleto Simples) via Pluga para emitir NFS-e automaticamente a partir de boletos e assinaturas.",
-      "icon": "/img/integracoes/boleto_simples-icon.svg",
+      "icon": "/docs/img/integracoes/boleto_simples-icon.svg",
       "link": "/integracoes/plataformas/pluga/kobana"
     },
     {
@@ -127,7 +127,7 @@
       "provider": "Loja Integrada",
       "title": "Integração NFe.io + Loja Integrada",
       "description": "Integre o NFe.io com a Loja Integrada via Pluga para emitir NF-e automaticamente a partir de pedidos pagos.",
-      "icon": "/img/integracoes/loja_integrada-icon.svg",
+      "icon": "/docs/img/integracoes/loja_integrada-icon.svg",
       "link": "/integracoes/plataformas/pluga/loja-integrada"
     },
     {
@@ -135,7 +135,7 @@
       "provider": "Magento 1.x",
       "title": "Integração NFe.io + Magento 1.x",
       "description": "Integre o NFe.io com o Magento 1.x via Pluga para emitir NF-e automaticamente a partir de pedidos e pagamentos aprovados.",
-      "icon": "/img/integracoes/magento-icon.svg",
+      "icon": "/docs/img/integracoes/magento-icon.svg",
       "link": "/integracoes/plataformas/pluga/magento"
     },
     {
@@ -143,7 +143,7 @@
       "provider": "Mercado Pago",
       "title": "Integração NFe.io + Mercado Pago",
       "description": "Saiba como integrar NFe.io com Mercado Pago via Pluga para automatizar a emissão de notas fiscais eletrônicas a partir de pagamentos aprovados.",
-      "icon": "/img/integracoes/mercado-pago-icon.svg",
+      "icon": "/docs/img/integracoes/mercado-pago-icon.svg",
       "link": "/integracoes/plataformas/pluga/mercado-pago"
     },
     {
@@ -151,7 +151,7 @@
       "provider": "Pagar.me",
       "title": "Integração NFe.io + Pagar.me",
       "description": "Saiba como integrar NFe.io com Pagar.me via Pluga para automatizar a emissão de notas fiscais eletrônicas a partir de pagamentos aprovados.",
-      "icon": "/img/integracoes/pagar-me-icon.svg",
+      "icon": "/docs/img/integracoes/pagar-me-icon.svg",
       "link": "/integracoes/plataformas/pluga/pagar-me"
     },
     {
@@ -159,7 +159,7 @@
       "provider": "Pipefy",
       "title": "Integração NFe.io + Pipefy",
       "description": "Integre o NFe.io com o Pipefy via Pluga para emitir NFS-e automaticamente a partir de cards criados, movidos de fase ou finalizados.",
-      "icon": "/img/integracoes/pipefy-icon.svg",
+      "icon": "/docs/img/integracoes/pipefy-icon.svg",
       "link": "/integracoes/plataformas/pluga/pipefy"
     },
     {
@@ -167,7 +167,7 @@
       "provider": "Pluga Webhooks",
       "title": "Integração NFe.io + Pluga Webhooks",
       "description": "Integre o NFe.io com o Pluga Webhooks para emitir NF-e/NFS-e automaticamente a partir de eventos recebidos por webhook.",
-      "icon": "/img/integracoes/pluga-webhooks-icon.svg",
+      "icon": "/docs/img/integracoes/pluga-webhooks-icon.svg",
       "link": "/integracoes/plataformas/pluga/pluga-webhooks"
     },
     {
@@ -175,7 +175,7 @@
       "provider": "Squarespace",
       "title": "Integração NFe.io + Squarespace",
       "description": "Integre o NFe.io com o Squarespace via Pluga para emitir NF-e automaticamente a partir de pedidos e pagamentos aprovados.",
-      "icon": "/img/integracoes/squarespace-icon.svg",
+      "icon": "/docs/img/integracoes/squarespace-icon.svg",
       "link": "/integracoes/plataformas/pluga/squarespace"
     },
     {
@@ -183,7 +183,7 @@
       "provider": "Stripe",
       "title": "Integração NFe.io + Stripe",
       "description": "Integre o NFe.io com o Stripe via Pluga para emitir NFS-e automaticamente a partir de pagamentos e assinaturas aprovados.",
-      "icon": "/img/integracoes/stripe-icon.svg",
+      "icon": "/docs/img/integracoes/stripe-icon.svg",
       "link": "/integracoes/plataformas/pluga/stripe"
     },
     {
@@ -191,7 +191,7 @@
       "provider": "Superlógica Assinaturas",
       "title": "Integração NFe.io + Superlógica Assinaturas",
       "description": "Integre o NFe.io com a Superlógica Assinaturas via Pluga para emitir NFS-e automaticamente a partir de cobranças e assinaturas.",
-      "icon": "/img/integracoes/superlogica-icon.svg",
+      "icon": "/docs/img/integracoes/superlogica-icon.svg",
       "link": "/integracoes/plataformas/pluga/superlogica"
     },
     {
@@ -199,7 +199,7 @@
       "provider": "Typeform",
       "title": "Integração NFe.io + Typeform",
       "description": "Integre o NFe.io com o Typeform via Pluga para emitir NF-e/NFS-e automaticamente a partir de novas respostas do formulário.",
-      "icon": "/img/integracoes/typeform-icon.svg",
+      "icon": "/docs/img/integracoes/typeform-icon.svg",
       "link": "/integracoes/plataformas/pluga/typeform"
     },
     {
@@ -207,7 +207,7 @@
       "provider": "Vindi Recorrência",
       "title": "Integração NFe.io + Vindi Recorrência",
       "description": "Integre o NFe.io com a Vindi via Pluga para emitir NFS-e automaticamente a partir de transações e assinaturas aprovadas.",
-      "icon": "/img/integracoes/vindi-icon.svg",
+      "icon": "/docs/img/integracoes/vindi-icon.svg",
       "link": "/integracoes/plataformas/pluga/vindi"
     },
     {
@@ -215,7 +215,7 @@
       "provider": "Webflow",
       "title": "Integração NFe.io + Webflow",
       "description": "Integre o NFe.io com o Webflow via Pluga para emitir NF-e automaticamente a partir de pedidos e pagamentos aprovados.",
-      "icon": "/img/integracoes/webflow-icon.svg",
+      "icon": "/docs/img/integracoes/webflow-icon.svg",
       "link": "/integracoes/plataformas/pluga/webflow"
     },
     {
@@ -223,7 +223,7 @@
       "provider": "WooCommerce",
       "title": "Integração NFe.io + WooCommerce",
       "description": "Integre o NFe.io com o WooCommerce via Pluga para emitir NF-e automaticamente a partir de pedidos e pagamentos aprovados.",
-      "icon": "/img/integracoes/woocommerce-icon.svg",
+      "icon": "/docs/img/integracoes/woocommerce-icon.svg",
       "link": "/integracoes/plataformas/pluga/woocommerce"
     }
   ],
@@ -233,7 +233,7 @@
       "provider": "Microsoft Flow",
       "title": "Microsoft Flow",
       "description": "Entenda o que é Microsoft Flow, como usar junto ao Google Planilhas e integrá-lo à plataforma da NFE.io.",
-      "icon": "/img/integracoes/microsoft-flow-icon.svg",
+      "icon": "/docs/img/integracoes/microsoft-flow-icon.svg",
       "link": "/integracoes/plugins/microsoft-flow"
     },
     {
@@ -241,7 +241,7 @@
       "provider": "WHMCS",
       "title": "Módulo WHMCS NFE.io",
       "description": "O plugin NFE.io para WHMCS permite a emissão automática de notas fiscais eletrônicas (NF-e) para suas vendas realizadas na plataforma WHMCS.",
-      "icon": "/img/integracoes/whmcs-icon.svg",
+      "icon": "/docs/img/integracoes/whmcs-icon.svg",
       "link": "/integracoes/plugins/whmcs"
     },
     {
@@ -249,7 +249,7 @@
       "provider": "WooCommerce",
       "title": "Plugin Woocommerce NFE.io",
       "description": "O plugin NFE.io para WooCommerce permite a emissão automática de notas fiscais eletrônicas (NF-e) para suas vendas realizadas na plataforma WooCommerce.",
-      "icon": "/img/integracoes/woocommerce-icon.svg",
+      "icon": "/docs/img/integracoes/woocommerce-icon.svg",
       "link": "/integracoes/plugins/woocommerce"
     }
   ]
